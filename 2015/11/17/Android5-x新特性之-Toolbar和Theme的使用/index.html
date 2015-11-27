@@ -5,19 +5,19 @@
   
   <title>Android5.x新特性之 Toolbar和Theme的使用 | 小刚</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
-1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
+  <meta name="description" content="Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrimary：整个当前Activity的字体的默认颜色。4.andro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android5.x新特性之 Toolbar和Theme的使用">
 <meta property="og:url" content="http://yoursite.com/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/index.html">
 <meta property="og:site_name" content="小刚">
-<meta property="og:description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
-1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
-<meta property="og:updated_time" content="2015-11-17T09:52:54.724Z">
+<meta property="og:description" content="Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrimary：整个当前Activity的字体的默认颜色。4.andro">
+<meta property="og:updated_time" content="2015-11-27T06:32:34.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android5.x新特性之 Toolbar和Theme的使用">
-<meta name="twitter:description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
-1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
+<meta name="twitter:description" content="Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrimary：整个当前Activity的字体的默认颜色。4.andro">
   
     <link rel="alternative" href="/atom.xml" title="小刚" type="application/atom+xml">
   
@@ -198,8 +198,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Android5-x新特性之_Toolbar和Theme的使用">Android5.x新特性之 Toolbar和Theme的使用</h2><p>Android5.x新特性之 Toolbar和Theme的使用:<a href="http://www.2cto.com/kf/201506/407276.html" target="_blank" rel="external">http://www.2cto.com/kf/201506/407276.html</a></p>
-<p>1.colorPrimary: Toolbar导航栏的底色。<br>2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。<br>3.textColorPrimary：整个当前Activity的字体的默认颜色。<br>4.android:windowBackground：当前Activity的窗体颜色。<br>5.colorAccent：CheckBox，RadioButton，SwitchCompat等控件的点击选中颜色<br>6.colorControlNormal：CheckBox，RadioButton，SwitchCompat等默认状态的颜色。<br>7.colorButtonNormal：默认状态下Button按钮的颜色。<br>8.editTextColor：默认EditView输入框字体的颜色。</p>
+        <p>Android5.x新特性之 Toolbar和Theme的使用:<a href="http://www.2cto.com/kf/201506/407276.html" target="_blank" rel="external">http://www.2cto.com/kf/201506/407276.html</a></p>
+<p>1.colorPrimary: Toolbar导航栏的底色。<br>2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。<br>3.textColorPrimary：整个当前Activity的字体的默认颜色。<br>4.android:windowBackground：当前Activity的窗体颜色。<br><a id="more"></a><br>5.colorAccent：CheckBox，RadioButton，SwitchCompat等控件的点击选中颜色<br>6.colorControlNormal：CheckBox，RadioButton，SwitchCompat等默认状态的颜色。<br>7.colorButtonNormal：默认状态下Button按钮的颜色。<br>8.editTextColor：默认EditView输入框字体的颜色。</p>
 <p>使用方法：请结合：<a href="http://www.materialpalette.com/" target="_blank" rel="external">http://www.materialpalette.com/</a>   下载XML文件进行配置。<br>        <code applescript="" class="hljs"><br>        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" type="text/css"><!-- Customize your theme here. --><br>                <!--导航栏底色--><br>                <item name=colorPrimary>@color/accent_material_dark</item><br>                <!--状态栏底色--><br>                <item name=colorPrimaryDark>@color/accent_material_light</item><br>                <!--导航栏上的标题颜色--><br>                <item name=android:textColorPrimary>@android:color/black</item><br>                <!--Activity窗口的颜色--><br>                <item name=android:windowBackground>@color/material_blue_grey_800</item><br>                <!--按钮选中或者点击获得焦点后的颜色--><br>                <item name=colorAccent>#00ff00</item><br>                <!--和 colorAccent相反，正常状态下按钮的颜色--><br>                <item name=colorControlNormal>#ff0000</item><br>                <!--Button按钮正常状态颜色--><br>                <item name=colorButtonNormal>@color/accent_material_light</item><br>                <!--EditText 输入框中字体的颜色--><br>                <item name=editTextColor>@android:color/white</item></style><br>        </code></p>
 
       
