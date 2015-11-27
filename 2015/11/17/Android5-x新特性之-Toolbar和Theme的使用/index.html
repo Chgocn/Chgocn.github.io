@@ -3,33 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LinearLayout divider的用法 | 小刚</title>
+  <title>Android5.x新特性之 Toolbar和Theme的使用 | 小刚</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LinearLayout divider的用法use this for horizontal divider
-&amp;lt;View
-    android:layout_width=&quot;1dp&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:background=&quot;@color/honeycombish_blue&quot; /&amp;gt;
-and this">
+  <meta name="description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LinearLayout divider的用法">
-<meta property="og:url" content="http://yoursite.com/2015/11/17/LinearLayout-divider的用法/index.html">
+<meta property="og:title" content="Android5.x新特性之 Toolbar和Theme的使用">
+<meta property="og:url" content="http://yoursite.com/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/index.html">
 <meta property="og:site_name" content="小刚">
-<meta property="og:description" content="LinearLayout divider的用法use this for horizontal divider
-&amp;lt;View
-    android:layout_width=&quot;1dp&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:background=&quot;@color/honeycombish_blue&quot; /&amp;gt;
-and this">
-<meta property="og:updated_time" content="2015-11-17T09:46:27.248Z">
+<meta property="og:description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
+<meta property="og:updated_time" content="2015-11-17T09:52:54.724Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LinearLayout divider的用法">
-<meta name="twitter:description" content="LinearLayout divider的用法use this for horizontal divider
-&amp;lt;View
-    android:layout_width=&quot;1dp&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:background=&quot;@color/honeycombish_blue&quot; /&amp;gt;
-and this">
+<meta name="twitter:title" content="Android5.x新特性之 Toolbar和Theme的使用">
+<meta name="twitter:description" content="Android5.x新特性之 Toolbar和Theme的使用Android5.x新特性之 Toolbar和Theme的使用:http://www.2cto.com/kf/201506/407276.html
+1.colorPrimary: Toolbar导航栏的底色。2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。3.textColorPrima">
   
     <link rel="alternative" href="/atom.xml" title="小刚" type="application/atom+xml">
   
@@ -181,11 +169,11 @@ and this">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-LinearLayout-divider的用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android5-x新特性之-Toolbar和Theme的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/17/LinearLayout-divider的用法/" class="article-date">
-  	<time datetime="2015-11-17T09:42:14.000Z" itemprop="datePublished">11月 17 2015</time>
+      <a href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/" class="article-date">
+  	<time datetime="2015-11-17T09:51:26.000Z" itemprop="datePublished">11月 17 2015</time>
 </a>
     </div>
   
@@ -198,7 +186,7 @@ and this">
         
   
     <h1 class="article-title" itemprop="name">
-      LinearLayout divider的用法
+      Android5.x新特性之 Toolbar和Theme的使用
     </h1>
   
 
@@ -207,10 +195,6 @@ and this">
       <div class="article-info article-info-post">
         
         
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Android/">Android</a>
-	</div>
-
 
         <div class="clearfix"></div>
       </div>
@@ -218,32 +202,9 @@ and this">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="LinearLayout_divider的用法">LinearLayout divider的用法</h2><p>use this for horizontal divider</p>
-<pre><code>&lt;View
-    android:<span class="variable">layout_width=</span><span class="string">"1dp"</span>
-    android:<span class="variable">layout_height=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">background=</span><span class="string">"@color/honeycombish_blue"</span> /&gt;
-</code></pre><p>and this for vertical divider</p>
-<pre><code>&lt;View
-    android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">layout_height=</span><span class="string">"1dp"</span>
-    android:<span class="variable">background=</span><span class="string">"@color/honeycombish_blue"</span> /&gt;
-</code></pre><p>OR if you can use the LinearLayout divider, for horizontal divider</p>
-<pre><code><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
-<span class="tag">&lt;<span class="title">shape</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span> &gt;</span>
-    <span class="tag">&lt;<span class="title">size</span> <span class="attribute">android:height</span>=<span class="value">"1dp"</span>/&gt;</span>
-    <span class="tag">&lt;<span class="title">solid</span> <span class="attribute">android:color</span>=<span class="value">"#f6f6f6"</span>/&gt;</span>
-<span class="tag">&lt;/<span class="title">shape</span>&gt;</span>
-</code></pre><p>and in LinearLayout</p>
-<pre><code>&lt;LinearLayout xmlns:<span class="variable">android=</span><span class="string">"http://schemas.android.com/apk/res/android"</span>
-    android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">layout_height=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">divider=</span><span class="string">"@drawable/divider"</span>
-    android:<span class="variable">orientation=</span><span class="string">"vertical"</span>
-    android:<span class="variable">showDividers=</span><span class="string">"middle"</span> &gt;
-</code></pre><p>If you want to user vertical divider then in place of android:height=”1dp” in shape use android:width=”1dp”</p>
-<p>来源： <a href="http://stackoverflow.com/questions/15128652/how-to-add-vertical-divider-to-a-horizontal-linearlayout" target="_blank" rel="external">http://stackoverflow.com/questions/15128652/how-to-add-vertical-divider-to-a-horizontal-linearlayout</a></p>
-<p>android:showDividers属性可以设置如下4个值：<br>none：不显示分隔线；<br>beginning：在LinearLayout的开始处显示分隔线；<br>end：在Linearlayout的结尾处显示分隔线；<br>middle：在LinearLayout中的每两个组件间显示分隔线：</p>
+        <h2 id="Android5-x新特性之_Toolbar和Theme的使用">Android5.x新特性之 Toolbar和Theme的使用</h2><p>Android5.x新特性之 Toolbar和Theme的使用:<a href="http://www.2cto.com/kf/201506/407276.html" target="_blank" rel="external">http://www.2cto.com/kf/201506/407276.html</a></p>
+<p>1.colorPrimary: Toolbar导航栏的底色。<br>2.colorPrimaryDark：状态栏的底色，注意这里只支持Android5.0以上的手机。<br>3.textColorPrimary：整个当前Activity的字体的默认颜色。<br>4.android:windowBackground：当前Activity的窗体颜色。<br>5.colorAccent：CheckBox，RadioButton，SwitchCompat等控件的点击选中颜色<br>6.colorControlNormal：CheckBox，RadioButton，SwitchCompat等默认状态的颜色。<br>7.colorButtonNormal：默认状态下Button按钮的颜色。<br>8.editTextColor：默认EditView输入框字体的颜色。</p>
+<p>使用方法：请结合：<a href="http://www.materialpalette.com/" target="_blank" rel="external">http://www.materialpalette.com/</a>   下载XML文件进行配置。<br>        <code applescript="" class="hljs"><br>        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" type="text/css"><!-- Customize your theme here. --><br>                <!--导航栏底色--><br>                <item name=colorPrimary>@color/accent_material_dark</item><br>                <!--状态栏底色--><br>                <item name=colorPrimaryDark>@color/accent_material_light</item><br>                <!--导航栏上的标题颜色--><br>                <item name=android:textColorPrimary>@android:color/black</item><br>                <!--Activity窗口的颜色--><br>                <item name=android:windowBackground>@color/material_blue_grey_800</item><br>                <!--按钮选中或者点击获得焦点后的颜色--><br>                <item name=colorAccent>#00ff00</item><br>                <!--和 colorAccent相反，正常状态下按钮的颜色--><br>                <item name=colorControlNormal>#ff0000</item><br>                <!--Button按钮正常状态颜色--><br>                <item name=colorButtonNormal>@color/accent_material_light</item><br>                <!--EditText 输入框中字体的颜色--><br>                <item name=editTextColor>@android:color/white</item></style><br>        </code></p>
 
       
     </div>
@@ -253,18 +214,9 @@ and this">
     
 <nav id="article-nav">
   
-    <a href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Android5.x新特性之 Toolbar和Theme的使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/12/SVN图标不显示/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SVN图标无法正常显示</div>
+    <a href="/2015/11/17/LinearLayout-divider的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LinearLayout divider的用法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -293,7 +245,7 @@ and this">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="LinearLayout-divider的用法" data-title="LinearLayout divider的用法" data-url="http://yoursite.com/2015/11/17/LinearLayout-divider的用法/"></div>
+	<div class="ds-thread" data-thread-key="Android5-x新特性之-Toolbar和Theme的使用" data-title="Android5.x新特性之 Toolbar和Theme的使用" data-url="http://yoursite.com/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
