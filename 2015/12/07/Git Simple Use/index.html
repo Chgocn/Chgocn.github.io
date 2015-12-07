@@ -5,25 +5,16 @@
   
   <title>Git使用技巧以及出现的bug | tiny_cn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
-Git Local 基本操作初始化
-设置全局变量git config --global user.name &quot;yourname&quot;
-git config --global user.mail &quot;yourm">
+  <meta name="description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git使用技巧以及出现的bug">
 <meta property="og:url" content="http://yoursite.com/2015/12/07/Git Simple Use/index.html">
 <meta property="og:site_name" content="tiny_cn's blog">
-<meta property="og:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
-Git Local 基本操作初始化
-设置全局变量git config --global user.name &quot;yourname&quot;
-git config --global user.mail &quot;yourm">
-<meta property="og:updated_time" content="2015-12-07T05:12:05.539Z">
+<meta property="og:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。">
+<meta property="og:updated_time" content="2015-12-07T05:14:55.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git使用技巧以及出现的bug">
-<meta name="twitter:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
-Git Local 基本操作初始化
-设置全局变量git config --global user.name &quot;yourname&quot;
-git config --global user.mail &quot;yourm">
+<meta name="twitter:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。">
   
     <link rel="alternative" href="/atom.xml" title="tiny_cn&#39;s blog" type="application/atom+xml">
   
@@ -195,24 +186,19 @@ git config --global user.mail &quot;yourm">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言">前言</h2><pre><code>昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
-</code></pre><h2 id="Git_Local_基本操作">Git Local 基本操作</h2><h1 id="初始化">初始化</h1><ul>
-<li>设置全局变量<pre><code>git config --global user<span class="class">.name</span> <span class="string">"yourname"</span>
-git config --global user<span class="class">.mail</span> <span class="string">"yourmail@mail.com"</span>
-</code></pre></li>
-<li>初始化新版本库<pre><code><span class="title">git</span> init 
-</code></pre></li>
-<li>设置忽略的文件<pre><code>创建<span class="class">.gitignore</span>文本文件，然后配置需要忽略的文件，可使用正则表达式，最后添加到版本库，进行提交。
-</code></pre></li>
-<li>添加新文件到版本库<pre><code>git <span class="built_in">add</span> <span class="comment">.//添加所有的文件</span>
-git <span class="built_in">add</span> readme.m<span class="comment">d//添加readme.md</span>
-</code></pre></li>
-<li>提交<pre><code>git commit -m <span class="string">"add new file"</span>//-m是参数message,引号内的<span class="built_in">add</span> <span class="built_in">new</span> <span class="built_in">file</span>是提交的message的具体值。
-</code></pre><h1 id="日常操作">日常操作</h1></li>
-<li>提交<pre><code><span class="bullet">* </span>提交所有更改
-<span class="bullet">* </span>提交单一更改
-<span class="bullet">* </span>增补提交
-</code></pre></li>
+        <h2 id="前言">前言</h2><p>昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。<br><a id="more"></a></p>
+<h2 id="Git_Local_基本操作">Git Local 基本操作</h2><h1 id="初始化">初始化</h1><ul>
+<li>设置全局变量<br>  git config —global user.name “yourname”<br>  git config —global user.mail “yourmail@mail.com”</li>
+<li>初始化新版本库<br>  git init </li>
+<li>设置忽略的文件<br>创建.gitignore文本文件，然后配置需要忽略的文件，可使用正则表达式，最后添加到版本库，进行提交。</li>
+<li>添加新文件到版本库<br>  git add .//添加所有的文件<br>  git add readme.md//添加readme.md</li>
+<li>提交<br>  git commit -m “add new file”//-m是参数message,引号内的add new file是提交的message的具体值。<h1 id="日常操作">日常操作</h1></li>
+<li>提交<ul>
+<li>提交所有更改</li>
+<li>提交单一更改</li>
+<li>增补提交</li>
+</ul>
+</li>
 <li>撤销修改</li>
 <li>分支</li>
 <li>解决冲突</li>
