@@ -3,19 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SVN图标无法正常显示 | tiny_cn&#39;s blog</title>
+  <title>Git使用技巧以及出现的bug | tiny_cn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="根本原因：Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。解决办法：修改注册表项1、删除其他软件。2、修改优先级。">
+  <meta name="description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
+Git Local 基本操作初始化
+设置全局变量git config --global user.name &quot;yourname&quot;
+git config --global user.mail &quot;yourm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SVN图标无法正常显示">
-<meta property="og:url" content="http://yoursite.com/2015/08/12/SVN图标不显示/index.html">
+<meta property="og:title" content="Git使用技巧以及出现的bug">
+<meta property="og:url" content="http://yoursite.com/2015/12/07/Git Simple Use/index.html">
 <meta property="og:site_name" content="tiny_cn's blog">
-<meta property="og:description" content="根本原因：Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。解决办法：修改注册表项1、删除其他软件。2、修改优先级。">
-<meta property="og:image" content="http://7vik6r.com1.z0.glb.clouddn.com/SVN%E6%8D%95%E8%8E%B7.PNG">
-<meta property="og:updated_time" content="2015-11-27T08:39:27.415Z">
+<meta property="og:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
+Git Local 基本操作初始化
+设置全局变量git config --global user.name &quot;yourname&quot;
+git config --global user.mail &quot;yourm">
+<meta property="og:updated_time" content="2015-12-07T05:12:05.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SVN图标无法正常显示">
-<meta name="twitter:description" content="根本原因：Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。解决办法：修改注册表项1、删除其他软件。2、修改优先级。">
+<meta name="twitter:title" content="Git使用技巧以及出现的bug">
+<meta name="twitter:description" content="前言昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
+Git Local 基本操作初始化
+设置全局变量git config --global user.name &quot;yourname&quot;
+git config --global user.mail &quot;yourm">
   
     <link rel="alternative" href="/atom.xml" title="tiny_cn&#39;s blog" type="application/atom+xml">
   
@@ -150,11 +158,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="photo-SVN图标不显示" class="article article-type-photo" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git Simple Use" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/12/SVN图标不显示/" class="article-date">
-  	<time datetime="2015-08-12T02:17:10.000Z" itemprop="datePublished">8月 12 2015</time>
+      <a href="/2015/12/07/Git Simple Use/" class="article-date">
+  	<time datetime="2015-12-07T04:21:26.000Z" itemprop="datePublished">12月 7 2015</time>
 </a>
     </div>
   
@@ -167,7 +175,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SVN图标无法正常显示
+      Git使用技巧以及出现的bug
     </h1>
   
 
@@ -176,14 +184,10 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li></ul>
 	</div>
 
         
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/SVN/">SVN</a>
-	</div>
-
 
         <div class="clearfix"></div>
       </div>
@@ -191,7 +195,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>根本原因：Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。<br>解决办法：修改注册表项<br>1、删除其他软件。<br>2、修改优先级。<br><a id="more"></a><br>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers如下图<br><img src="http://7vik6r.com1.z0.glb.clouddn.com/SVN%E6%8D%95%E8%8E%B7.PNG" alt="enter image description here"> </p>
+        <h2 id="前言">前言</h2><pre><code>昨天花了一个小时整理了一份详细的git使用技巧，无奈markdownpad免费版不支持自动保存，下班之后我就把电脑关了，然后早上悲催的发现昨天的努力没有了，故怒把markdownpad卸载了。
+</code></pre><h2 id="Git_Local_基本操作">Git Local 基本操作</h2><h1 id="初始化">初始化</h1><ul>
+<li>设置全局变量<pre><code>git config --global user<span class="class">.name</span> <span class="string">"yourname"</span>
+git config --global user<span class="class">.mail</span> <span class="string">"yourmail@mail.com"</span>
+</code></pre></li>
+<li>初始化新版本库<pre><code><span class="title">git</span> init 
+</code></pre></li>
+<li>设置忽略的文件<pre><code>创建<span class="class">.gitignore</span>文本文件，然后配置需要忽略的文件，可使用正则表达式，最后添加到版本库，进行提交。
+</code></pre></li>
+<li>添加新文件到版本库<pre><code>git <span class="built_in">add</span> <span class="comment">.//添加所有的文件</span>
+git <span class="built_in">add</span> readme.m<span class="comment">d//添加readme.md</span>
+</code></pre></li>
+<li>提交<pre><code>git commit -m <span class="string">"add new file"</span>//-m是参数message,引号内的<span class="built_in">add</span> <span class="built_in">new</span> <span class="built_in">file</span>是提交的message的具体值。
+</code></pre><h1 id="日常操作">日常操作</h1></li>
+<li>提交<pre><code><span class="bullet">* </span>提交所有更改
+<span class="bullet">* </span>提交单一更改
+<span class="bullet">* </span>增补提交
+</code></pre></li>
+<li>撤销修改</li>
+<li>分支</li>
+<li>解决冲突</li>
+<li>标签</li>
+<li>查看状态<h2 id="Git_Remote_基本操作">Git Remote 基本操作</h2><h1 id="初始化-1">初始化</h1></li>
+<li>克隆版本库<h1 id="日常操作-1">日常操作</h1></li>
+<li>分支</li>
+<li>从远程库获取</li>
+<li>推入远程库<h1 id="SSH_key配置">SSH key配置</h1></li>
+</ul>
 
       
     </div>
@@ -201,18 +232,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/17/LinearLayout-divider的用法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          LinearLayout divider的用法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PagerSlidingTabStrip+ViewPager实现二级导签</div>
+    <a href="/2015/12/07/常用开发工具包：Sublime Text 3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用开发工具包：Sublime Text</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -241,7 +263,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="SVN图标不显示" data-title="SVN图标无法正常显示" data-url="http://yoursite.com/2015/08/12/SVN图标不显示/"></div>
+	<div class="ds-thread" data-thread-key="Git Simple Use" data-title="Git使用技巧以及出现的bug" data-url="http://yoursite.com/2015/12/07/Git Simple Use/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
