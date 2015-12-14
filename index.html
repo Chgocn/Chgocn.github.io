@@ -96,7 +96,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/PagerSlidingTabStrip/" style="font-size: 10px;">PagerSlidingTabStrip</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Sublime-Text/" style="font-size: 10px;">Sublime Text</a> <a href="/tags/ViewPager/" style="font-size: 10px;">ViewPager</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/tortoisegit/" style="font-size: 10px;">tortoisegit</a> <a href="/tags/二级导航/" style="font-size: 10px;">二级导航</a>
+						<a href="/tags/OkHttpClient/" style="font-size: 10px;">OkHttpClient</a> <a href="/tags/PagerSlidingTabStrip/" style="font-size: 10px;">PagerSlidingTabStrip</a> <a href="/tags/SVN/" style="font-size: 10px;">SVN</a> <a href="/tags/Sublime-Text/" style="font-size: 10px;">Sublime Text</a> <a href="/tags/ViewPager/" style="font-size: 10px;">ViewPager</a> <a href="/tags/fragment/" style="font-size: 10px;">fragment</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/tortoisegit/" style="font-size: 10px;">tortoisegit</a> <a href="/tags/二级导航/" style="font-size: 10px;">二级导航</a>
 					</div>
 				</section>
 				
@@ -149,6 +149,97 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-nullpointexception when request network in fragment" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/14/nullpointexception when request network in fragment/" class="article-date">
+  	<time datetime="2015-12-14T09:05:14.000Z" itemprop="datePublished">12月 14 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/14/nullpointexception when request network in fragment/">Fragment中请求网络报出NullPointException</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言">前言</h1><p>今天同事在fragment中使用我封装的一个OkHttp请求网络时，死活报空指针，所以无奈他找到了我，然后向我求救。其中引发了我对Android的底层实现的进一步学习。</p>
+<h1 id="Bug还原">Bug还原</h1><h2 id="同事代码（这里只是拿了关键性代码）">同事代码（这里只是拿了关键性代码）</h2><pre><code><span class="keyword">public</span> XxxFragment <span class="keyword">extends</span> Fragment{
+    <span class="keyword">private</span> OkHttpCallBack mOkHttpCallBack = <span class="keyword">new</span> OkHttpCallBack(getActivity){
+        <span class="annotation">@Override</span>
+        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(<span class="keyword">final</span> Request request, <span class="keyword">final</span> IOException e)</span> </span>{
+            Log.e(<span class="string">"TAG"</span>,<span class="string">"on failure..."</span>);
+        }
+
+        <span class="annotation">@Override</span>
+        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(<span class="keyword">final</span> Response response)</span> </span>{
+            Log.e(<span class="string">"TAG"</span>,<span class="string">"on success..."</span>)
+        }
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="keyword">public</span> View onCreatView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)) {
+        View view = inflater.inflater(R.layout.xxx,container,<span class="keyword">false</span>);
+        RequestBody formBody = <span class="keyword">new</span> FormEncodingBuilder()
+        .add(<span class="string">"phone"</span>, phone)
+        .build();
+        Request request = <span class="keyword">new</span> Request.Builder()
+        .url(getUrl(<span class="string">"common/send-code"</span>))
+        .tag(<span class="string">"sendCode"</span>)
+        .post(formBody)
+        .build();
+        <span class="keyword">new</span> OkHttpClient().newCall(request);
+        <span class="keyword">return</span> view;
+    }
+}
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OkHttpClient/">OkHttpClient</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fragment/">fragment</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/14/nullpointexception when request network in fragment/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Git Simple Use" class="article article-type-post" itemscope itemprop="blogPost">
   
