@@ -3,27 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android深入学习导航 | tiny_cn&#39;s blog</title>
+  <title>ShareSDK微信无法回调 | tiny_cn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。
-Android 四大组件1、Android 四大组件之 Activity 的生命周期以及使用
-
-Activity之间数据传递-">
+  <meta name="description" content="前言在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。
+使用shareSDK微信无法回调微信分享不了：1、测试没有打包（用keystroke打包apk）2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android深入学习导航">
-<meta property="og:url" content="http://yoursite.com/2015/12/16/android-navigation/index.html">
+<meta property="og:title" content="ShareSDK微信无法回调">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/wechat can't callback/index.html">
 <meta property="og:site_name" content="tiny_cn's blog">
-<meta property="og:description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。
-Android 四大组件1、Android 四大组件之 Activity 的生命周期以及使用
-
-Activity之间数据传递-">
-<meta property="og:updated_time" content="2015-12-16T12:41:29.972Z">
+<meta property="og:description" content="前言在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。
+使用shareSDK微信无法回调微信分享不了：1、测试没有打包（用keystroke打包apk）2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，p">
+<meta property="og:updated_time" content="2016-01-26T07:15:55.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android深入学习导航">
-<meta name="twitter:description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。
-Android 四大组件1、Android 四大组件之 Activity 的生命周期以及使用
-
-Activity之间数据传递-">
+<meta name="twitter:title" content="ShareSDK微信无法回调">
+<meta name="twitter:description" content="前言在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。
+使用shareSDK微信无法回调微信分享不了：1、测试没有打包（用keystroke打包apk）2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，p">
   
     <link rel="alternative" href="/atom.xml" title="tiny_cn&#39;s blog" type="application/atom+xml">
   
@@ -158,11 +152,11 @@ Activity之间数据传递-">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-android-navigation" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-wechat can&#39;t callback" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/android-navigation/" class="article-date">
-  	<time datetime="2015-12-16T12:35:14.000Z" itemprop="datePublished">12月 16 2015</time>
+      <a href="/2016/01/26/wechat can't callback/" class="article-date">
+  	<time datetime="2016-01-26T07:06:14.000Z" itemprop="datePublished">1月 26 2016</time>
 </a>
     </div>
   
@@ -175,7 +169,7 @@ Activity之间数据传递-">
         
   
     <h1 class="article-title" itemprop="name">
-      Android深入学习导航
+      ShareSDK微信无法回调
     </h1>
   
 
@@ -195,58 +189,10 @@ Activity之间数据传递-">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言">前言</h1><p>最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。</p>
-<h1 id="Android_四大组件">Android 四大组件</h1><p>1、Android 四大组件之 Activity 的生命周期以及使用</p>
-<ul>
-<li>Activity之间数据传递-Intent的学习</li>
-<li>startActivityForResult(intent, requestCode)的使用</li>
-<li>BaseActivity定义原则</li>
-<li>Activity实际项目使用技巧<a id="more"></a>
-2、Android 四大组件之 BroadcastReceiver 的生命周期以及使用</li>
-<li>有序广播和无序广播的区别</li>
-<li>BraodCastReceiver使用场景</li>
-<li>Service + BraodCastReceiver的使用<br>3、Android 四大组件之 Service 的生命周期以及使用</li>
-<li>Service生命周期原理 + 实际操作<br>4、Android 四大元件之 Content Provider 的生命周期以及使用</li>
-</ul>
+        <h1 id="前言">前言</h1><p>在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。</p>
+<h1 id="使用shareSDK微信无法回调">使用shareSDK微信无法回调</h1><p>微信分享不了：<br>1、测试没有打包（用keystroke打包apk）<br>2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，ps： 填写到微信开放平台 然后把MD5中的 大写字母改成小写字母 冒号去掉）<br>3、分享参数错误（微信有分享类型的详情参考：<a href="http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/" target="_blank" rel="external">http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/</a><br>）<br>4、应用没有审核通过<br>5、包名跟开放平台上面的不一致<br>6、没有在在mob.com申请key！<br>7、修改签名会在微信客户端有缓存的，要卸载重新安装微信客户端重新安装，微信开放平台修改签名有时候会延迟刷新，可以明天继续测试看看</p>
 <hr>
-<h1 id="Android_五大布局">Android 五大布局</h1><h2 id="五大Layout_原理架构">五大Layout 原理架构</h2><ol>
-<li>Android  组件布局 ( ㄧ ) LinearLayout</li>
-<li>Android  组件布局 ( 二 ) RelativeLayout</li>
-<li>Android  组件布局 ( 三 ) TableLayout</li>
-<li>Android  组件布局 ( 四 ) FrameLayout</li>
-<li>Android  组件布局 ( 五 ) AbsoluteLayout</li>
-</ol>
-<hr>
-<h1 id="Android_消息机制以及事件传递">Android 消息机制以及事件传递</h1><hr>
-<h1 id="Android_数据存储">Android 数据存储</h1><hr>
-<h1 id="Android_自定义控件">Android 自定义控件</h1><hr>
-<h1 id="Android_设计模式">Android 设计模式</h1><hr>
-<h1 id="Android_Interface编程">Android Interface编程</h1><hr>
-<h1 id="Android_高阶之路(软硬兼备)">Android 高阶之路(软硬兼备)</h1><ul>
-<li>NDK</li>
-<li>Gps</li>
-<li>Bluetooth</li>
-<li>G-sensor</li>
-<li>MediaPlayer</li>
-<li>SQlite</li>
-</ul>
-<hr>
-<h1 id="Android_杂项_-_非关程式">Android 杂项 -  非关程式</h1><ul>
-<li>发布 apk 之在 android 专案中 import 第三方提供的 library</li>
-<li>发布 apk 之  build   一个 apk 可能遇到的状况</li>
-<li>手动打包 APK 及 APK Decompile</li>
-<li>Android模拟器</li>
-<li>Debug</li>
-<li>App 国际化</li>
-<li>Android Studio</li>
-<li>Eclipse</li>
-</ul>
-<hr>
-<h1 id="其它技术">其它技术</h1><ul>
-<li>数据加密（MD5、AES）</li>
-<li>正则表达式</li>
-<li>VCS</li>
-</ul>
+<h1 id="后话">后话</h1><p>shareSDK在服务这一方面确实做的不错，有问必打，这相较于其它一些第三方SDK的提供方，Mob平台算是国内的良心平台了。</p>
 
       
     </div>
@@ -256,18 +202,9 @@ Activity之间数据传递-">
     
 <nav id="article-nav">
   
-    <a href="/2016/01/26/wechat can't callback/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ShareSDK微信无法回调
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/14/nullpointexception when request network in fragment/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Fragment中请求网络报出NullPointException</div>
+    <a href="/2015/12/16/android-navigation/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android深入学习导航</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -296,7 +233,7 @@ Activity之间数据传递-">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="android-navigation" data-title="Android深入学习导航" data-url="http://yoursite.com/2015/12/16/android-navigation/"></div>
+	<div class="ds-thread" data-thread-key="wechat can&#39;t callback" data-title="ShareSDK微信无法回调" data-url="http://yoursite.com/2016/01/26/wechat can&#39;t callback/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
