@@ -150,6 +150,63 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-fastjson过滤不需要的字段" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/22/fastjson过滤不需要的字段/" class="article-date">
+  	<time datetime="2016-03-22T11:48:14.000Z" itemprop="datePublished">3月 22 2016</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="官方文档地址:[https://github-com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]">官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]</h1><p>对于List<peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。</peaple></p>
+<h2 id="解决办法：">解决办法：</h2><pre><code><span class="annotation">@JSONField</span>(serialize=<span class="keyword">false</span>)
+<span class="keyword">private</span> <span class="keyword">int</span> age;
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-wechat can&#39;t callback" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
