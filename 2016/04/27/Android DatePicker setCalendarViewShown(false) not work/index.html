@@ -3,21 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>fastjson过滤不需要的字段 | tiny_cn&#39;s blog</title>
+  <title>Android DatePicker setCalendarViewShown(false) not work | tiny_cn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。
-解决办法：@JS">
+  <meta name="description" content="date_picker.xml:
+&amp;lt;DatePicker xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:id=&quot;@+id/dialog_date_datePicker&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_heigh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fastjson过滤不需要的字段">
-<meta property="og:url" content="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/index.html">
+<meta property="og:title" content="Android DatePicker setCalendarViewShown(false) not work">
+<meta property="og:url" content="http://yoursite.com/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/index.html">
 <meta property="og:site_name" content="tiny_cn's blog">
-<meta property="og:description" content="官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。
-解决办法：@JS">
-<meta property="og:updated_time" content="2016-03-22T11:56:25.003Z">
+<meta property="og:description" content="date_picker.xml:
+&amp;lt;DatePicker xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:id=&quot;@+id/dialog_date_datePicker&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_heigh">
+<meta property="og:updated_time" content="2016-04-27T06:51:18.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fastjson过滤不需要的字段">
-<meta name="twitter:description" content="官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。
-解决办法：@JS">
+<meta name="twitter:title" content="Android DatePicker setCalendarViewShown(false) not work">
+<meta name="twitter:description" content="date_picker.xml:
+&amp;lt;DatePicker xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:id=&quot;@+id/dialog_date_datePicker&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_heigh">
   
     <link rel="alternative" href="/atom.xml" title="tiny_cn&#39;s blog" type="application/atom+xml">
   
@@ -152,11 +161,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-fastjson过滤不需要的字段" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android DatePicker setCalendarViewShown(false) not work" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/22/fastjson过滤不需要的字段/" class="article-date">
-  	<time datetime="2016-03-22T11:48:14.000Z" itemprop="datePublished">3月 22 2016</time>
+      <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/" class="article-date">
+  	<time datetime="2016-04-27T06:47:14.000Z" itemprop="datePublished">4月 27 2016</time>
 </a>
     </div>
   
@@ -169,7 +178,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      fastjson过滤不需要的字段
+      Android DatePicker setCalendarViewShown(false) not work
     </h1>
   
 
@@ -189,9 +198,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="官方文档地址:[https://github-com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]">官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]</h1><p>对于List<peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。</peaple></p>
-<h2 id="解决办法：">解决办法：</h2><pre><code><span class="annotation">@JSONField</span>(serialize=<span class="keyword">false</span>)
-<span class="keyword">private</span> <span class="keyword">int</span> age;
+        <p>date_picker.xml:</p>
+<pre><code>&lt;DatePicker xmlns:<span class="variable">android=</span><span class="string">"http://schemas.android.com/apk/res/android"</span>
+    android:<span class="variable">id=</span><span class="string">"@+id/dialog_date_datePicker"</span>
+    android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
+    android:<span class="variable">layout_height=</span><span class="string">"match_parent"</span>
+    android:<span class="variable">calendarViewShown=</span><span class="string">"false"</span>
+    android:<span class="variable">datePickerMode=</span><span class="string">"spinner"</span> &gt;
+&lt;/DatePicker&gt;
+</code></pre><p>xxxxActivity.OnClick方法中：</p>
+<pre><code>private void m2<span class="params">()</span> {
+       int month;
+       int year;
+       int day;
+       AlertDialog.Builder builder = new AlertDialog.Builder<span class="params">(this)</span>;
+       builder.setTitle<span class="params">(<span class="string">"生日"</span>)</span>;
+       View view = View.inflate<span class="params">(this,R.layout.date_picker,null)</span>;
+       DatePicker datePicker = <span class="params">(DatePicker)</span> view.findViewById<span class="params">(R.id.dialog_date_datePicker)</span>;
+       datePicker.getViewTreeObserver<span class="params">()</span>.addOnGlobalLayoutListener<span class="params">(new ViewTreeObserver.OnGlobalLayoutListener<span class="params">()</span> {
+               @Override
+               public void onGlobalLayout<span class="params">()</span> {
+
+               }
+       })</span>;
+       String birthday = <span class="string">"xxxxxxxx"</span>;
+       <span class="keyword">if</span> <span class="params">(TextUtils.isEmpty<span class="params">(birthday)</span> || <span class="number">8</span> != birthday.length<span class="params">()</span>)</span> {
+           month = <span class="number">1</span>;
+           year = <span class="number">1970</span>;
+           day = <span class="number">1</span>;
+       } <span class="keyword">else</span> {
+           month = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">0</span>, <span class="number">4</span>)</span>)</span>;
+           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">4</span>, <span class="number">6</span>)</span>)</span>;
+           year = month;
+           month = day;
+           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">6</span>, <span class="number">8</span>)</span>)</span>;
+       }
+       ViewGroup viewGroup = <span class="params">(ViewGroup)</span> <span class="params">(<span class="params">(ViewGroup)</span> datePicker.getChildAt<span class="params">(<span class="number">0</span>)</span>)</span>.getChildAt<span class="params">(<span class="number">0</span>)</span>;
+       datePicker.setMaxDate<span class="params">(System.currentTimeMillis<span class="params">()</span>)</span>;
+       datePicker.init<span class="params">(year, month - <span class="number">1</span>, day, null)</span>;
+       builder.setView<span class="params">(datePicker)</span>;
+       builder.setPositiveButton<span class="params">(<span class="string">"确定"</span>, new DialogInterface.OnClickListener<span class="params">()</span> {
+           @Override
+           public void onClick<span class="params">(DialogInterface dialog, int which)</span> {
+
+           }
+       })</span>;
+       datePicker.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
+       viewGroup.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
+       datePicker.setCalendarViewShown<span class="params">(<span class="literal">false</span>)</span>;
+       <span class="params">(<span class="params">(InputMethodManager)</span> getSystemService<span class="params">(INPUT_METHOD_SERVICE)</span>)</span>.hideSoftInputFromWindow<span class="params">(viewGroup.getWindowToken<span class="params">()</span>, <span class="number">0</span>)</span>;
+       builder.show<span class="params">()</span>;
+   }
 </code></pre>
       
     </div>
@@ -201,18 +258,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Android DatePicker setCalendarViewShown(false) not work
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/26/wechat can't callback/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ShareSDK微信无法回调</div>
+    <a href="/2016/03/22/fastjson过滤不需要的字段/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fastjson过滤不需要的字段</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -241,7 +289,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="fastjson过滤不需要的字段" data-title="fastjson过滤不需要的字段" data-url="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/"></div>
+	<div class="ds-thread" data-thread-key="Android DatePicker setCalendarViewShown(false) not work" data-title="Android DatePicker setCalendarViewShown(false) not work" data-url="http://yoursite.com/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

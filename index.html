@@ -150,6 +150,111 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Android DatePicker setCalendarViewShown(false) not work" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/" class="article-date">
+  	<time datetime="2016-04-27T06:47:14.000Z" itemprop="datePublished">4月 27 2016</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>date_picker.xml:</p>
+<pre><code>&lt;DatePicker xmlns:<span class="variable">android=</span><span class="string">"http://schemas.android.com/apk/res/android"</span>
+    android:<span class="variable">id=</span><span class="string">"@+id/dialog_date_datePicker"</span>
+    android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
+    android:<span class="variable">layout_height=</span><span class="string">"match_parent"</span>
+    android:<span class="variable">calendarViewShown=</span><span class="string">"false"</span>
+    android:<span class="variable">datePickerMode=</span><span class="string">"spinner"</span> &gt;
+&lt;/DatePicker&gt;
+</code></pre><p>xxxxActivity.OnClick方法中：</p>
+<pre><code>private void m2<span class="params">()</span> {
+       int month;
+       int year;
+       int day;
+       AlertDialog.Builder builder = new AlertDialog.Builder<span class="params">(this)</span>;
+       builder.setTitle<span class="params">(<span class="string">"生日"</span>)</span>;
+       View view = View.inflate<span class="params">(this,R.layout.date_picker,null)</span>;
+       DatePicker datePicker = <span class="params">(DatePicker)</span> view.findViewById<span class="params">(R.id.dialog_date_datePicker)</span>;
+       datePicker.getViewTreeObserver<span class="params">()</span>.addOnGlobalLayoutListener<span class="params">(new ViewTreeObserver.OnGlobalLayoutListener<span class="params">()</span> {
+               @Override
+               public void onGlobalLayout<span class="params">()</span> {
+
+               }
+       })</span>;
+       String birthday = <span class="string">"xxxxxxxx"</span>;
+       <span class="keyword">if</span> <span class="params">(TextUtils.isEmpty<span class="params">(birthday)</span> || <span class="number">8</span> != birthday.length<span class="params">()</span>)</span> {
+           month = <span class="number">1</span>;
+           year = <span class="number">1970</span>;
+           day = <span class="number">1</span>;
+       } <span class="keyword">else</span> {
+           month = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">0</span>, <span class="number">4</span>)</span>)</span>;
+           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">4</span>, <span class="number">6</span>)</span>)</span>;
+           year = month;
+           month = day;
+           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">6</span>, <span class="number">8</span>)</span>)</span>;
+       }
+       ViewGroup viewGroup = <span class="params">(ViewGroup)</span> <span class="params">(<span class="params">(ViewGroup)</span> datePicker.getChildAt<span class="params">(<span class="number">0</span>)</span>)</span>.getChildAt<span class="params">(<span class="number">0</span>)</span>;
+       datePicker.setMaxDate<span class="params">(System.currentTimeMillis<span class="params">()</span>)</span>;
+       datePicker.init<span class="params">(year, month - <span class="number">1</span>, day, null)</span>;
+       builder.setView<span class="params">(datePicker)</span>;
+       builder.setPositiveButton<span class="params">(<span class="string">"确定"</span>, new DialogInterface.OnClickListener<span class="params">()</span> {
+           @Override
+           public void onClick<span class="params">(DialogInterface dialog, int which)</span> {
+
+           }
+       })</span>;
+       datePicker.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
+       viewGroup.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
+       datePicker.setCalendarViewShown<span class="params">(<span class="literal">false</span>)</span>;
+       <span class="params">(<span class="params">(InputMethodManager)</span> getSystemService<span class="params">(INPUT_METHOD_SERVICE)</span>)</span>.hideSoftInputFromWindow<span class="params">(viewGroup.getWindowToken<span class="params">()</span>, <span class="number">0</span>)</span>;
+       builder.show<span class="params">()</span>;
+   }
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-fastjson过滤不需要的字段" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -671,68 +776,6 @@ B98FC99C 8FAC73EE D<span class="number">2B95564</span> DF450523
 
 
   
-    <article id="photo-SVN图标不显示" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/12/SVN图标不显示/" class="article-date">
-  	<time datetime="2015-08-12T02:17:10.000Z" itemprop="datePublished">8月 12 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/12/SVN图标不显示/">SVN图标无法正常显示</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>根本原因：Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。<br>解决办法：修改注册表项<br>1、删除其他软件。<br>2、修改优先级。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/SVN/">SVN</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/12/SVN图标不显示/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
     <article id="photo-PagerSlidingTabStrip+ViewPager实现二级页签" class="article article-type-photo" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -795,6 +838,10 @@ B98FC99C 8FAC73EE D<span class="number">2B95564</span> DF450523
 
 
   
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
