@@ -91,6 +91,16 @@
 
 
 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?69ec2def9e19ad2e28b8c85184ae52cd";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 
 </head>
 <body>
@@ -174,11 +184,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa weibo" href="http://weibo.com/520126249" title="weibo"></a>
                             
-                                <a class="fa GitHub" href="/#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" href="https://github.com/Chgocn" title="GitHub"></a>
                             
                         </ul>
                     </nav>
@@ -210,7 +218,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">A Android Mobile Developer.</div>
                 </section>
                 
             </div>
@@ -252,11 +260,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa weibo" target="_blank" href="http://weibo.com/520126249" title="weibo"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="/#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Chgocn" title="GitHub"></a>
                             
                         </ul>
             </nav>
@@ -295,15 +301,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="简述">简述</h1><p>整理优秀的git学习教程。</p>
-<h1 id="单词翻译">单词翻译</h1><pre><code><span class="label">Remote:</span> 远程仓库
-<span class="label">Repository:</span> 仓库区（本地仓库）
-Index / Stage：暂存区
-Workspace：工作区
-<span class="label">Origin:</span> 远程主机 
-Master：主干（用于发布realse版本）
-<span class="label">Branch:</span> 分支（用于处理一些耗时的工作，修复bug,开发新功能,可以有多个分支）
-</code></pre>
+              <h1 id="简述">简述</h1><p>整理优秀的git学习教程。<br>
           
       
     </div>
@@ -371,7 +369,7 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>date_picker.xml:</p>
+              <p>date_picker.xml:</p>
 <pre><code>&lt;DatePicker xmlns:<span class="variable">android=</span><span class="string">"http://schemas.android.com/apk/res/android"</span>
     android:<span class="variable">id=</span><span class="string">"@+id/dialog_date_datePicker"</span>
     android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
@@ -379,50 +377,8 @@ Master：主干（用于发布realse版本）
     android:<span class="variable">calendarViewShown=</span><span class="string">"false"</span>
     android:<span class="variable">datePickerMode=</span><span class="string">"spinner"</span> &gt;
 &lt;/DatePicker&gt;
-</code></pre><p>xxxxActivity.OnClick方法中：</p>
-<pre><code>private void m2<span class="params">()</span> {
-       int month;
-       int year;
-       int day;
-       AlertDialog.Builder builder = new AlertDialog.Builder<span class="params">(this)</span>;
-       builder.setTitle<span class="params">(<span class="string">"生日"</span>)</span>;
-       View view = View.inflate<span class="params">(this,R.layout.date_picker,null)</span>;
-       DatePicker datePicker = <span class="params">(DatePicker)</span> view.findViewById<span class="params">(R.id.dialog_date_datePicker)</span>;
-       datePicker.getViewTreeObserver<span class="params">()</span>.addOnGlobalLayoutListener<span class="params">(new ViewTreeObserver.OnGlobalLayoutListener<span class="params">()</span> {
-               @Override
-               public void onGlobalLayout<span class="params">()</span> {
-
-               }
-       })</span>;
-       String birthday = <span class="string">"xxxxxxxx"</span>;
-       <span class="keyword">if</span> <span class="params">(TextUtils.isEmpty<span class="params">(birthday)</span> || <span class="number">8</span> != birthday.length<span class="params">()</span>)</span> {
-           month = <span class="number">1</span>;
-           year = <span class="number">1970</span>;
-           day = <span class="number">1</span>;
-       } <span class="keyword">else</span> {
-           month = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">0</span>, <span class="number">4</span>)</span>)</span>;
-           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">4</span>, <span class="number">6</span>)</span>)</span>;
-           year = month;
-           month = day;
-           day = Integer.valueOf<span class="params">(birthday.substring<span class="params">(<span class="number">6</span>, <span class="number">8</span>)</span>)</span>;
-       }
-       ViewGroup viewGroup = <span class="params">(ViewGroup)</span> <span class="params">(<span class="params">(ViewGroup)</span> datePicker.getChildAt<span class="params">(<span class="number">0</span>)</span>)</span>.getChildAt<span class="params">(<span class="number">0</span>)</span>;
-       datePicker.setMaxDate<span class="params">(System.currentTimeMillis<span class="params">()</span>)</span>;
-       datePicker.init<span class="params">(year, month - <span class="number">1</span>, day, null)</span>;
-       builder.setView<span class="params">(datePicker)</span>;
-       builder.setPositiveButton<span class="params">(<span class="string">"确定"</span>, new DialogInterface.OnClickListener<span class="params">()</span> {
-           @Override
-           public void onClick<span class="params">(DialogInterface dialog, int which)</span> {
-
-           }
-       })</span>;
-       datePicker.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
-       viewGroup.setDescendantFocusability<span class="params">(ViewGroup.FOCUS_BLOCK_DESCENDANTS)</span>;
-       datePicker.setCalendarViewShown<span class="params">(<span class="literal">false</span>)</span>;
-       <span class="params">(<span class="params">(InputMethodManager)</span> getSystemService<span class="params">(INPUT_METHOD_SERVICE)</span>)</span>.hideSoftInputFromWindow<span class="params">(viewGroup.getWindowToken<span class="params">()</span>, <span class="number">0</span>)</span>;
-       builder.show<span class="params">()</span>;
-   }
 </code></pre>
+          
       
     </div>
     
@@ -435,6 +391,10 @@ Master：主干（用于发布realse版本）
 
 
       
+      
+        <p class="article-more-link">
+          <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/#more">查看全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -481,10 +441,8 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="官方文档地址:[https://github-com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]">官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]</h1><p>对于List<peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。</peaple></p>
-<h2 id="解决办法：">解决办法：</h2><pre><code><span class="annotation">@JSONField</span>(serialize=<span class="keyword">false</span>)
-<span class="keyword">private</span> <span class="keyword">int</span> age;
-</code></pre>
+              <h1 id="官方文档地址:[https://github-com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]">官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]</h1><p>对于List<Peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。<br>
+          
       
     </div>
     
@@ -497,6 +455,10 @@ Master：主干（用于发布realse版本）
 
 
       
+      
+        <p class="article-more-link">
+          <a href="/2016/03/22/fastjson过滤不需要的字段/#more">查看全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -543,11 +505,8 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="前言">前言</h1><p>在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。</p>
-<h1 id="使用shareSDK微信无法回调">使用shareSDK微信无法回调</h1><p>微信分享不了：<br>1、测试没有打包（用keystroke打包apk）<br>2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，ps： 填写到微信开放平台 然后把MD5中的 大写字母改成小写字母 冒号去掉）<br>3、分享参数错误（微信有分享类型的详情参考：<a href="http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/" target="_blank" rel="external">http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/</a><br>）<br>4、应用没有审核通过<br>5、包名跟开放平台上面的不一致<br>6、没有在在mob.com申请key！<br>7、修改签名会在微信客户端有缓存的，要卸载重新安装微信客户端重新安装，微信开放平台修改签名有时候会延迟刷新，可以明天继续测试看看</p>
-<hr>
-<h1 id="后话">后话</h1><p>shareSDK在服务这一方面确实做的不错，有问必打，这相较于其它一些第三方SDK的提供方，Mob平台算是国内的良心平台了。</p>
-
+              <h1 id="前言">前言</h1><p>在有的公司，像申请app_key之类的工作并不需要程序员来做，那么比较坑的事就来了，当你在实现一项功能的时候，发现自己的代码并没有什么问题，但是功能就是有问题，这就是一个坑啊，故此记录一下吧。<br>
+          
       
     </div>
     
@@ -560,6 +519,10 @@ Master：主干（用于发布realse版本）
 
 
       
+      
+        <p class="article-more-link">
+          <a href="/2016/01/26/wechat can't callback/#more">查看全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -606,13 +569,7 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="前言">前言</h1><p>最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。</p>
-<h1 id="Android_四大组件">Android 四大组件</h1><p>1、Android 四大组件之 Activity 的生命周期以及使用</p>
-<ul>
-<li>Activity之间数据传递-Intent的学习</li>
-<li>startActivityForResult(intent, requestCode)的使用</li>
-<li>BaseActivity定义原则</li>
-<li>Activity实际项目使用技巧
+              <h1 id="前言">前言</h1><p>最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。<br>
           
       
     </div>
@@ -676,36 +633,7 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="前言">前言</h1><p>今天同事在fragment中使用我封装的一个OkHttp请求网络时，死活报空指针，所以无奈他找到了我，然后向我求救。其中引发了我对Android的底层实现的进一步学习。</p>
-<h1 id="Bug还原">Bug还原</h1><h2 id="同事代码（这里只是拿了关键性代码）">同事代码（这里只是拿了关键性代码）</h2><pre><code><span class="keyword">public</span> XxxFragment <span class="keyword">extends</span> Fragment{
-    <span class="keyword">private</span> OkHttpCallBack mOkHttpCallBack = <span class="keyword">new</span> OkHttpCallBack(getActivity){
-        <span class="annotation">@Override</span>
-        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(<span class="keyword">final</span> Request request, <span class="keyword">final</span> IOException e)</span> </span>{
-            Log.e(<span class="string">"TAG"</span>,<span class="string">"on failure..."</span>);
-        }
-
-        <span class="annotation">@Override</span>
-        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(<span class="keyword">final</span> Response response)</span> </span>{
-            Log.e(<span class="string">"TAG"</span>,<span class="string">"on success..."</span>)
-        }
-    }
-
-    <span class="annotation">@Override</span>
-    <span class="keyword">public</span> View onCreatView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)) {
-        View view = inflater.inflater(R.layout.xxx,container,<span class="keyword">false</span>);
-        RequestBody formBody = <span class="keyword">new</span> FormEncodingBuilder()
-        .add(<span class="string">"phone"</span>, phone)
-        .build();
-        Request request = <span class="keyword">new</span> Request.Builder()
-        .url(getUrl(<span class="string">"common/send-code"</span>))
-        .tag(<span class="string">"sendCode"</span>)
-        .post(formBody)
-        .build();
-        <span class="keyword">new</span> OkHttpClient().newCall(request);
-        <span class="keyword">return</span> view;
-    }
-}
-</code></pre>
+              <h1 id="前言">前言</h1><p>今天同事在fragment中使用我封装的一个OkHttp请求网络时，死活报空指针，所以无奈他找到了我，然后向我求救。其中引发了我对Android的底层实现的进一步学习。<br>
           
       
     </div>
@@ -827,7 +755,7 @@ Master：主干（用于发布realse版本）
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/07/常用开发工具包：Sublime Text 3/">常用开发工具包：Sublime Text</a>
+      <a class="article-title" href="/2015/12/07/常用开发工具包：Sublime Text 3/">Sublime Text</a>
     </h1>
   
 
@@ -837,20 +765,7 @@ Master：主干（用于发布realse版本）
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="官网地址"><a href="http://www.sublimetext.com/">官网地址</a></h2><h2 id="注册码">注册码</h2><pre><code>----- BEGIN LICENSE ----
-Andrew Weber
-Single User License
-EA7E-855605
-813A03DD 5E4AD<span class="number">9E6 6C0</span>EEB94 BC99798F
-<span class="number">942194A6 02</span>396E98 E<span class="number">62C9979 4</span>BB979FE
-<span class="number">91424C9</span>D A45400BF F<span class="number">6747D88 2</span>FB88078
-90F5CC94 1CDC92DC <span class="number">8457107</span><span class="keyword">A</span> F151657B
-<span class="number">1D22E383</span> <span class="keyword">A</span><span class="number">997F016</span> <span class="number">42397640 33</span>F41CFC
-E1D0AE85 A0BBD<span class="number">039 0E9</span>C8D55 E1B89D5D
-5CDB7036 E56DE1C0 EFCC<span class="number">0840 650</span>CD3A6
-B98FC99C 8FAC73EE D<span class="number">2B95564</span> DF450523
------- END LICENSE ------
-</code></pre>
+              <h2 id="官网地址"><a href="http://www.sublimetext.com/">官网地址</a></h2>
           
       
     </div>
@@ -1030,7 +945,7 @@ B98FC99C 8FAC73EE D<span class="number">2B95564</span> DF450523
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016 Chgocn
+                2015-2016 Chgocn
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
@@ -1062,22 +977,6 @@ B98FC99C 8FAC73EE D<span class="number">2B95564</span> DF450523
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
 
 
 
