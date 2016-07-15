@@ -195,7 +195,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
                     </div>
                 </section>
                 
@@ -271,6 +271,89 @@
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Hexo基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/Hexo基本使用/" class="article-date">
+      <time datetime="2016-07-15T15:11:10.000Z" itemprop="datePublished">7月 15 2016</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>整理和总结优秀的hexo学习教程。</p>
+<h2 id="安装">安装</h2><pre><code><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span>
+<span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span>
+hexo init <span class="comment">#初始化</span>
+</code></pre><h2 id="基本命令">基本命令</h2><pre><code>hexo n <span class="string">"my blog"</span> == hexo new <span class="string">"my blog"</span> <span class="comment">#新建文章</span>
+hexo <span class="variable">p =</span>= hexo publish
+hexo <span class="variable">g =</span>= hexo generate<span class="comment">#生成静态网页</span>
+hexo <span class="variable">s =</span>= hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
+hexo <span class="variable">d =</span>= hexo deploy<span class="comment">#将.deploy目录部署到GitHub</span>
+hexo clean <span class="comment">#清除缓存 网页正常情况下可以忽略此条命令</span>
+hexo generate --deploy
+hexo deploy --generate
+hexo deploy -g
+hexo server -g
+</code></pre><h2 id="服务器">服务器</h2><pre><code>hexo <span class="keyword">server</span> <span class="preprocessor">#Hexo 会监视文件变动并自动更新，您无须重启服务器。</span>
+hexo <span class="keyword">server</span> -s <span class="preprocessor">#静态模式</span>
+hexo <span class="keyword">server</span> -p <span class="number">5000</span> <span class="preprocessor">#更改端口</span>
+hexo <span class="keyword">server</span> -i <span class="number">192.168</span>.1.1 <span class="preprocessor">#自定义 IP</span>
+</code></pre><h2 id="监视文件变动">监视文件变动</h2><pre><code><span class="title">hexo</span> generate --watch <span class="comment">#监视文件变动</span>
+</code></pre><h2 id="草稿">草稿</h2><pre><code>hexo publish [layout] <span class="tag">&lt;<span class="title">title</span>&gt;</span>
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Git的正确使用方式" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -848,74 +931,6 @@
       
         <p class="article-more-link">
           <a href="/2015/11/17/LinearLayout-divider的用法/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-PagerSlidingTabStrip+ViewPager实现二级页签" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/" class="article-date">
-      <time datetime="2015-08-12T02:17:10.000Z" itemprop="datePublished">8月 12 2015</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>效果：<br><img src="http://7vik6r.com1.z0.glb.clouddn.com/07FS0E@4%28URPD_D%60EQ5V%281D.png" alt="二级导航效果图"><br>实现的功能：点击一级导航，会自动切换到二级导航，滑动ViewPager,如果二级导航到最后一个数据，会自动切换到一级导航。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
