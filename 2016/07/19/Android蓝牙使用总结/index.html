@@ -15,17 +15,16 @@
 
 
 
-<meta name="description" content="Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。">
+<meta name="description" content="整理和总结优秀的安卓蓝牙使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理">
-<meta property="og:url" content="http://yoursite.com/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/index.html">
+<meta property="og:title" content="Android蓝牙使用总结">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/Android蓝牙使用总结/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。">
-<meta property="og:image" content="http://7vik6r.com1.z0.glb.clouddn.com/SVN%E6%8D%95%E8%8E%B7.PNG">
-<meta property="og:updated_time" content="2016-07-15T14:29:10.791Z">
+<meta property="og:description" content="整理和总结优秀的安卓蓝牙使用。">
+<meta property="og:updated_time" content="2016-07-19T12:34:52.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理">
-<meta name="twitter:description" content="Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。">
+<meta name="twitter:title" content="Android蓝牙使用总结">
+<meta name="twitter:description" content="整理和总结优秀的安卓蓝牙使用。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理 | Chgocn的博客</title>
+<title>Android蓝牙使用总结 | Chgocn的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -267,11 +266,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="photo-Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理" class="article article-type-photo" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android蓝牙使用总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/" class="article-date">
-      <time datetime="2015-08-12T02:17:10.000Z" itemprop="datePublished">Aug 12 2015</time>
+      <a href="/2016/07/19/Android蓝牙使用总结/" class="article-date">
+      <time datetime="2016-07-19T11:31:10.000Z" itemprop="datePublished">Jul 19 2016</time>
 </a>
 
 
@@ -286,7 +285,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理
+      Android蓝牙使用总结
     </h1>
   
 
@@ -294,10 +293,14 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bluetooth-ble/">bluetooth - ble</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -307,8 +310,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Windows Explorer Shell 支持的 Overlay Icon 最多 15 个，Windows 内部就是按图标名称的字母顺序来优先显示的，我们可以调整优先级。<br><a id="more"></a></p>
-<h3 id="解决办法">解决办法</h3><p>1、删除其他软件。(软件不在于多，而在于精)<br>2、修改注册表优先级。<br>window + r -&gt; regedit<br>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers如下图<br><img src="http://7vik6r.com1.z0.glb.clouddn.com/SVN%E6%8D%95%E8%8E%B7.PNG" alt="enter image description here"> </p>
+        <p>整理和总结优秀的安卓蓝牙使用。<br><a id="more"></a></p>
+<h2 id="必读">必读</h2><p>Android关于蓝牙的定义可分为普通蓝牙和低功耗蓝牙（俗称Bluetooth Low Energy,依以下简称Ble）。一般蓝牙设备如果支持Ble,会明确标注。那么作为开发人员，我们就必须根据实际情况去使用不同的api。</p>
+<h2 id="普通蓝牙通信">普通蓝牙通信</h2><h3 id="BluetoothAdapter简介"><a href="http://www.open-open.com/lib/view/open1390879771695.html" target="_blank" rel="external">BluetoothAdapter简介</a></h3><p>BluetoothAdapter代表了移动设备的本地的蓝牙适配器, 通过该蓝牙适配器可以对蓝牙进行基本操作, 例如 : 启动设备发现(startDiscovery), 获取已配对设备(getBoundedDevices), 通过mac蓝牙地址获取蓝牙设备(getRemoteDevice), 从其它设备创建一个监听连接(listenUsingRfcommWithServiceRecord);<br>注：普通蓝牙设备会不断的往外发送广播。所以我们只需要接收广播就可以拿到蓝牙设备的对象。</p>
+<h3 id="关于普通蓝牙的几个概念">关于普通蓝牙的几个概念</h3><blockquote>
+<p>服务端：作为输出流的对象。一般指的是外来蓝牙设备。<br>客户端：作为输入流的对象。一般指的是手机。<br>Socket：服务端和客户端的连接对象，用于客户端接收和发送数据。<br>BluetoothDevice: 蓝牙设备，也就是指的服务端。主要包括MAC(地址，每个蓝牙设备的地址都是唯一的。),Name(蓝牙设备显示的名称)等。<br>UUID：标识蓝牙设备的唯一特征码，类似于手机的UUID。</p>
+</blockquote>
+<h3 id="工作流程">工作流程</h3><p>1）首先开启蓝牙<br>2）搜索可用设备<br>3）创建蓝牙socket，获取输入输出流<br>4）读取和写入数据<br>5）断开连接关闭蓝牙</p>
+<h2 id="蓝牙低功耗">蓝牙低功耗</h2><p>占坑（明天再写）。</p>
 
       
     </div>
@@ -317,13 +326,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
-        <p><span>发布时间:</span>2015-08-12, 10:17:10</p>
-        <p><span>最后更新:</span>2016-07-15, 22:29:10</p>
+        <p><span>发布时间:</span>2016-07-19, 19:31:10</p>
+        <p><span>最后更新:</span>2016-07-19, 20:34:52</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/" title="Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理">http://yoursite.com/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/19/Android蓝牙使用总结/" title="Android蓝牙使用总结">http://yoursite.com/2016/07/19/Android蓝牙使用总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/19/Android蓝牙使用总结/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -335,16 +344,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/11/17/LinearLayout-divider的用法/">
-                    LinearLayout divider的用法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">
-                    PagerSlidingTabStrip+ViewPager实现二级导签
+                <a href="/2016/07/15/Hexo基本使用/">
+                    Hexo基本使用
                 </a>
             </div>
         
@@ -356,7 +359,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法"><span class="toc-number">1.</span> <span class="toc-text">解决办法</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#必读"><span class="toc-number">1.</span> <span class="toc-text">必读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#普通蓝牙通信"><span class="toc-number">2.</span> <span class="toc-text">普通蓝牙通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BluetoothAdapter简介"><span class="toc-number">2.1.</span> <span class="toc-text">BluetoothAdapter简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于普通蓝牙的几个概念"><span class="toc-number">2.2.</span> <span class="toc-text">关于普通蓝牙的几个概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程"><span class="toc-number">2.3.</span> <span class="toc-text">工作流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#蓝牙低功耗"><span class="toc-number">3.</span> <span class="toc-text">蓝牙低功耗</span></a></li></ol>
         
     </div>
     <style>
@@ -392,7 +395,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理　| Chgocn的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Android蓝牙使用总结　| Chgocn的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -408,7 +411,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/" data-title="Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理" data-url="http://yoursite.com/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/19/Android蓝牙使用总结/" data-title="Android蓝牙使用总结" data-url="http://yoursite.com/2016/07/19/Android蓝牙使用总结/"></div>
     <script>
         var duoshuoQuery = {short_name:"chgocn"};
         var loadComment = function(){
@@ -431,15 +434,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/11/17/LinearLayout-divider的用法/" title="上一篇: LinearLayout divider的用法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/" title="下一篇: PagerSlidingTabStrip+ViewPager实现二级导签">
+            <a href="/2016/07/15/Hexo基本使用/" title="下一篇: Hexo基本使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
