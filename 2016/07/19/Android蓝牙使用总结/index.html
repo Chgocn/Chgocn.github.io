@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/19/Android蓝牙使用总结/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
 <meta property="og:description" content="整理和总结优秀的安卓蓝牙使用。">
-<meta property="og:updated_time" content="2016-07-19T12:34:52.425Z">
+<meta property="og:updated_time" content="2016-07-20T04:47:23.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android蓝牙使用总结">
 <meta name="twitter:description" content="整理和总结优秀的安卓蓝牙使用。">
@@ -191,7 +191,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth-ble/">bluetooth - ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
                     </div>
                 </section>
                 
@@ -300,7 +300,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bluetooth-ble/">bluetooth - ble</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ble/">ble</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bluetooth/">bluetooth</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,10 +313,20 @@
         <p>整理和总结优秀的安卓蓝牙使用。<br><a id="more"></a></p>
 <h2 id="必读">必读</h2><p>Android关于蓝牙的定义可分为普通蓝牙和低功耗蓝牙（俗称Bluetooth Low Energy,依以下简称Ble）。一般蓝牙设备如果支持Ble,会明确标注。那么作为开发人员，我们就必须根据实际情况去使用不同的api。</p>
 <h2 id="普通蓝牙通信">普通蓝牙通信</h2><h3 id="BluetoothAdapter简介"><a href="http://www.open-open.com/lib/view/open1390879771695.html" target="_blank" rel="external">BluetoothAdapter简介</a></h3><p>BluetoothAdapter代表了移动设备的本地的蓝牙适配器, 通过该蓝牙适配器可以对蓝牙进行基本操作, 例如 : 启动设备发现(startDiscovery), 获取已配对设备(getBoundedDevices), 通过mac蓝牙地址获取蓝牙设备(getRemoteDevice), 从其它设备创建一个监听连接(listenUsingRfcommWithServiceRecord);<br>注：普通蓝牙设备会不断的往外发送广播。所以我们只需要接收广播就可以拿到蓝牙设备的对象。</p>
-<h3 id="关于普通蓝牙的几个概念">关于普通蓝牙的几个概念</h3><blockquote>
-<p>服务端：作为输出流的对象。一般指的是外来蓝牙设备。<br>客户端：作为输入流的对象。一般指的是手机。<br>Socket：服务端和客户端的连接对象，用于客户端接收和发送数据。<br>BluetoothDevice: 蓝牙设备，也就是指的服务端。主要包括MAC(地址，每个蓝牙设备的地址都是唯一的。),Name(蓝牙设备显示的名称)等。<br>UUID：标识蓝牙设备的唯一特征码，类似于手机的UUID。</p>
-</blockquote>
-<h3 id="工作流程">工作流程</h3><p>1）首先开启蓝牙<br>2）搜索可用设备<br>3）创建蓝牙socket，获取输入输出流<br>4）读取和写入数据<br>5）断开连接关闭蓝牙</p>
+<h3 id="关于普通蓝牙的几个概念">关于普通蓝牙的几个概念</h3><ul>
+<li>服务端：作为输出流的对象。一般指的是外来蓝牙设备。</li>
+<li>客户端：作为输入流的对象。一般指的是手机。</li>
+<li>Socket：服务端和客户端的连接对象，用于客户端接收和发送数据。</li>
+<li>BluetoothDevice: 蓝牙设备，也就是指的服务端。主要包括MAC(地址，每个蓝牙设备的地址都是唯一的。),Name(蓝牙设备显示的名称)等。</li>
+<li>UUID：标识蓝牙设备的唯一特征码，类似于手机的UUID。</li>
+</ul>
+<h3 id="工作流程">工作流程</h3><ol>
+<li>首先开启蓝牙</li>
+<li>搜索可用设备</li>
+<li>创建蓝牙socket，获取输入输出流</li>
+<li>读取和写入数据</li>
+<li>断开连接关闭蓝牙</li>
+</ol>
 <h2 id="蓝牙低功耗">蓝牙低功耗</h2><p>占坑（明天再写）。</p>
 
       
@@ -329,7 +339,7 @@
         <p><span>本文标题:</span><a href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
         <p><span>发布时间:</span>2016-07-19, 19:31:10</p>
-        <p><span>最后更新:</span>2016-07-19, 20:34:52</p>
+        <p><span>最后更新:</span>2016-07-20, 12:47:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/19/Android蓝牙使用总结/" title="Android蓝牙使用总结">http://yoursite.com/2016/07/19/Android蓝牙使用总结/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/19/Android蓝牙使用总结/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -343,6 +353,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/07/23/Android-Studio-Plugins/">
+                    我的 Android Studio 插件（不间断更新）
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -434,7 +450,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/07/23/Android-Studio-Plugins/" title="上一篇: 我的 Android Studio 插件（不间断更新）">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -446,7 +464,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 

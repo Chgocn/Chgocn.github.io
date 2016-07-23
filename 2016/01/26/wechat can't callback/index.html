@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/26/wechat can't callback/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
 <meta property="og:description" content="记录使用ShareSDK微信无法回调的解决办法。">
-<meta property="og:updated_time" content="2016-07-10T13:56:07.617Z">
+<meta property="og:updated_time" content="2016-07-20T05:09:56.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ShareSDK微信无法回调">
 <meta name="twitter:description" content="记录使用ShareSDK微信无法回调的解决办法。">
@@ -191,7 +191,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth-ble/">bluetooth - ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li></ul>
                     </div>
                 </section>
                 
@@ -307,7 +307,15 @@
       
           
         <p>记录使用ShareSDK微信无法回调的解决办法。<br><a id="more"></a></p>
-<h2 id="Mob官方客服回答">Mob官方客服回答</h2><p>1、测试没有打包（用keystroke打包apk）<br>2、打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，ps： 填写到微信开放平台 然后把MD5中的 大写字母改成小写字母 冒号去掉）<br>3、分享参数错误（微信有分享类型的详情参考：<a href="http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/" target="_blank" rel="external">http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/</a><br>）<br>4、应用没有审核通过<br>5、包名跟开放平台上面的不一致<br>6、没有在在mob.com申请key！<br>7、修改签名会在微信客户端有缓存，需要卸载重新安装微信客户端重新安装，微信开放平台修改签名有时候会延迟刷新，可以明天继续测试看看</p>
+<h2 id="Mob官方客服回答">Mob官方客服回答</h2><ol>
+<li>测试没有打包（用keystroke打包apk）</li>
+<li>打包的keystore跟微信开放平台上面的不一致， 导致MD5码不一致（微信开放平台填写的是MD5，ps： 填写到微信开放平台 然后把MD5中的 大写字母改成小写字母 冒号去掉）</li>
+<li>分享参数错误（微信有分享类型的详情参考：<a href="http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/" target="_blank" rel="external">http://wiki.mob.com/%e4%b8%8d%e5%90%8c%e5%b9%b3%e5%8f%b0%e5%88%86%e4%ba%ab%e5%86%85%e5%ae%b9%e7%9a%84%e8%af%a6%e7%bb%86%e8%af%b4%e6%98%8e/</a><br>）</li>
+<li>应用没有审核通过</li>
+<li>包名跟开放平台上面的不一致</li>
+<li>没有在在mob.com申请key！</li>
+<li>修改签名会在微信客户端有缓存，需要卸载重新安装微信客户端重新安装，微信开放平台修改签名有时候会延迟刷新，可以明天继续测试看看</li>
+</ol>
 
       
     </div>
@@ -319,7 +327,7 @@
         <p><span>本文标题:</span><a href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
         <p><span>发布时间:</span>2016-01-26, 15:06:14</p>
-        <p><span>最后更新:</span>2016-07-10, 21:56:07</p>
+        <p><span>最后更新:</span>2016-07-20, 13:09:56</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/26/wechat can't callback/" title="ShareSDK微信无法回调">http://yoursite.com/2016/01/26/wechat can&#39;t callback/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/26/wechat can&#39;t callback/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -444,7 +452,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 
