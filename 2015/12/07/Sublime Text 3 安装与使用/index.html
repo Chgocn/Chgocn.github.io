@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/07/Sublime Text 3 安装与使用/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
 <meta property="og:description" content="记录安装配置 Sublime 的过程，同时列出所用到的插件，方便自己在新电脑上快速使用。">
-<meta property="og:updated_time" content="2016-07-20T04:39:15.011Z">
+<meta property="og:updated_time" content="2016-07-25T09:47:32.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text 3 安装与使用">
 <meta name="twitter:description" content="记录安装配置 Sublime 的过程，同时列出所用到的插件，方便自己在新电脑上快速使用。">
@@ -310,7 +310,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>  记录安装配置 Sublime 的过程，同时列出所用到的插件，方便自己在新电脑上快速使用。<br><a id="more"></a></p>
+        <a id="more"></a>
 <h1 id="#">#</h1><h3 id="版本">版本</h3><p>Stable Channel,Build 3114。<br><a href="http://www.sublimetext.com/" target="_blank" rel="external">官网地址</a></p>
 <h3 id="User_Licence">User Licence</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#8212;&#8211; BEGIN LICENSE &#8212;&#8211;&#10;Michael Barnes&#10;Single User License&#10;EA7E-821385&#10;8A353C41 872A0D5C DF9B2950 AFF6F667&#10;C458EA6D 8EA3C286 98D1D650 131A97AB&#10;AA919AEC EF20E143 B361B1E7 4C8B7F04&#10;B085E65E 2F5F5360 8489D422 FB8FC1AA&#10;93F6323C FD7F7544 3F39C318 D95E6480&#10;FCCC7561 8A4A1741 68FA4223 ADCEDE07&#10;200C25BE DBBC4855 C4CFB774 C5EC138C&#10;0FEC1CEF D9DCECEC D3A5DAD1 01316C36&#10;&#8212;&#8212; END LICENSE &#8212;&#8212;</span><br></pre></td></tr></table></figure>
 <h2 id="快捷键">快捷键</h2><p>1、通用</p>
@@ -323,6 +323,7 @@ Ctrl + ←/→    进行逐词移动
 Ctrl + <span class="keyword">Shift</span> + ←/→    进行逐词选择
 Ctrl + ↑/↓    移动当前显示区域
 Ctrl + <span class="keyword">Shift</span> + ↑/↓    移动当前行
+Ctrl + <span class="keyword">Shift</span> + D 复制当前行或当前代码块
 </code></pre><p>3、选择</p>
 <pre><code>Ctrl + <span class="keyword">D</span>    选择当前光标所在的词并高亮该词所有出现的位置，再次 Ctrl + <span class="keyword">D</span> 选择该词出现的下一个位置，在多重选词的过程中，使用 Ctrl + K 进行跳过，使用 Ctrl + <span class="keyword">U</span> 进行回退，使用 Esc 退出多重编辑
 Ctrl + Shift + <span class="keyword">L</span>    将当前选中区域打散
@@ -372,18 +373,41 @@ Alt+<span class="keyword">Shift</span>+<span class="number">5</span>       Grid 
 </ul>
 <h2 id="常见插件">常见插件</h2><h3 id="Pretty_Json"><a href="https://github.com/dzhibas/SublimePrettyJson" target="_blank" rel="external">Pretty Json</a></h3><ul>
 <li>格式化Json。<blockquote>
-<p>快捷键 Ctrl + Alt + j.</p>
+<p>快捷键 Ctrl + Alt + j。</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="Theme-Dark_Material"><a href="https://packagecontrol.io/packages/Theme%20-%20Dark%20Material" target="_blank" rel="external">Theme-Dark Material</a></h3><ul>
-<li>Sublime Text 主题，护眼。<blockquote>
-<p>Peferences-Setting User:添加{</p>
-<pre><code><span class="string">"color_scheme"</span>: <span class="string">"Packages/Theme - Dark Material/schemes/Dark-Material.tmTheme"</span>,
-<span class="string">"theme"</span>: <span class="string">"Dark-Material.sublime-theme"</span>，
-<span class="string">"font_size"</span>: <span class="number">12</span>,<span class="comment">//额外添加字体大小。</span>
-</code></pre><p>}</p>
+<h3 id="Table_Editor"><a href="https://github.com/vkocubinsky/SublimeTableEditor" target="_blank" rel="external">Table Editor</a></h3><ul>
+<li>键入表格是个体力活，Table Editor 可以帮助我们减轻工作量。</li>
+<li>Ctrl + Alt + P调出控制台，Enable to current syntax。</li>
+</ul>
+<h3 id="SublimeTemp"><a href="https://github.com/kairyou/SublimeTmpl" target="_blank" rel="external">SublimeTemp</a></h3><ul>
+<li>设置新建文件的模板。</li>
+<li>个人设置Ctrl + Alt + 5创建markdown文件。</li>
+</ul>
+<h3 id="Sublime-Evernote"><a href="https://github.com/bordaigorl/sublime-evernote" target="_blank" rel="external">Sublime-Evernote</a></h3><ul>
+<li>Evernote插件，用于格式化印象笔记内容。</li>
+</ul>
+<h3 id="Monokai_Extended"><a href="https://github.com/jonschlinkert/sublime-monokai-extended" target="_blank" rel="external">Monokai Extended</a></h3><ul>
+<li>Markdown 格式在 Sublime 中默认无高亮，很多主题也不支持 Markdown 的高亮（包括 Markdown 代码块内的代码）,Monokai Extended刚好可以解决这个问题。</li>
+</ul>
+<h3 id="Markdown_Extended"><a href="https://github.com/jonschlinkert/sublime-markdown-extended" target="_blank" rel="external">Markdown Extended</a></h3><ul>
+<li>注意需要将 Markdown 的文件格式与 Markdown Extended 这种语法关联起来，做法是点击 Sublime 右下角文档格式，在列表最上方名为 Open all with current extension as 二级列表中选择 Markdown Extended。一种临时设置方式可以是 Shift + Command + P 调出 Command Palette，输入 ssm，选择 Set Syntax: Markdown Extended。</li>
+</ul>
+<h3 id="MarkdownEditing"><a href="https://github.com/SublimeText-Markdown/MarkdownEditing" target="_blank" rel="external">MarkdownEditing</a></h3><ul>
+<li>在 Sublime 中编写 Markdown 进行辅助提示。<blockquote>
+<p>Option + Command + K - 插入链接：<br>Option + Command + V - 粘贴为链接格式；<br>Shift + Command + K - 插入图片。</p>
 </blockquote>
+</li>
+</ul>
+<h3 id="Markdown_Preview"><a href="https://github.com/revolunet/sublimetext-markdown-preview" target="_blank" rel="external">Markdown Preview</a></h3><ul>
+<li>Markdown 文档渲染成想要的文档格式，进行预览。</li>
+<li>推荐配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#10;      &#34;parser&#34;: &#34;github&#34;,&#10;      &#34;build_action&#34;: &#34;browser&#34;,&#10;      &#34;enable_mathjax&#34;: true,&#10;      &#34;enable_uml&#34;: true,&#10;      &#34;enable_highlight&#34;: true,&#10;      &#34;enable_pygments&#34;: true,&#10;      &#34;enabled_extensions&#34;: &#34;github&#34;,&#10;      &#34;enabled_parsers&#34;: [&#34;github&#34;],&#10;      &#34;github_mode&#34;: &#34;markdown&#34;,&#10;      &#34;github_inject_header_ids&#34;: true,&#10;      &#34;enable_autoreload&#34;: false&#10;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Theme-Dark_Material"><a href="https://packagecontrol.io/packages/Theme%20-%20Dark%20Material" target="_blank" rel="external">Theme-Dark Material</a></h3><ul>
+<li>Sublime Text 主题，护眼。</li>
+<li>Peferences-Setting User:添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#10;      &#34;color_scheme&#34;: &#34;Packages/Theme - Dark Material/schemes/Dark-Material.tmTheme&#34;,&#10;      &#34;theme&#34;: &#34;Dark-Material.sublime-theme&#34;&#65292;&#10;      &#34;font_size&#34;: 12,//&#39069;&#22806;&#28155;&#21152;&#23383;&#20307;&#22823;&#23567;&#12290;&#10;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="BracketHighlighter"><a href="https://packagecontrol.io/packages/BracketHighlighter" target="_blank" rel="external">BracketHighlighter</a></h3><ul>
@@ -400,7 +424,7 @@ Alt+<span class="keyword">Shift</span>+<span class="number">5</span>       Grid 
         <p><span>本文标题:</span><a href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
         <p><span>发布时间:</span>2015-12-07, 11:45:10</p>
-        <p><span>最后更新:</span>2016-07-20, 12:39:15</p>
+        <p><span>最后更新:</span>2016-07-25, 17:47:32</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2015/12/07/Sublime Text 3 安装与使用/" title="Sublime Text 3 安装与使用">http://yoursite.com/2015/12/07/Sublime Text 3 安装与使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2015/12/07/Sublime Text 3 安装与使用/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -436,7 +460,7 @@ Alt+<span class="keyword">Shift</span>+<span class="number">5</span>       Grid 
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="##"><span class="toc-number">1.</span> <span class="toc-text">#</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#版本"><span class="toc-number">1.0.1.</span> <span class="toc-text">版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#User_Licence"><span class="toc-number">1.0.2.</span> <span class="toc-text">User Licence</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键"><span class="toc-number">1.1.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础插件"><span class="toc-number">1.2.</span> <span class="toc-text">基础插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package_Control"><span class="toc-number">1.2.1.</span> <span class="toc-text">Package Control</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见插件"><span class="toc-number">1.3.</span> <span class="toc-text">常见插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pretty_Json"><span class="toc-number">1.3.1.</span> <span class="toc-text">Pretty Json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Theme-Dark_Material"><span class="toc-number">1.3.2.</span> <span class="toc-text">Theme-Dark Material</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BracketHighlighter"><span class="toc-number">1.3.3.</span> <span class="toc-text">BracketHighlighter</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="##"><span class="toc-number">1.</span> <span class="toc-text">#</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#版本"><span class="toc-number">1.0.1.</span> <span class="toc-text">版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#User_Licence"><span class="toc-number">1.0.2.</span> <span class="toc-text">User Licence</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键"><span class="toc-number">1.1.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础插件"><span class="toc-number">1.2.</span> <span class="toc-text">基础插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package_Control"><span class="toc-number">1.2.1.</span> <span class="toc-text">Package Control</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见插件"><span class="toc-number">1.3.</span> <span class="toc-text">常见插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pretty_Json"><span class="toc-number">1.3.1.</span> <span class="toc-text">Pretty Json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Table_Editor"><span class="toc-number">1.3.2.</span> <span class="toc-text">Table Editor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SublimeTemp"><span class="toc-number">1.3.3.</span> <span class="toc-text">SublimeTemp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime-Evernote"><span class="toc-number">1.3.4.</span> <span class="toc-text">Sublime-Evernote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monokai_Extended"><span class="toc-number">1.3.5.</span> <span class="toc-text">Monokai Extended</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Extended"><span class="toc-number">1.3.6.</span> <span class="toc-text">Markdown Extended</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MarkdownEditing"><span class="toc-number">1.3.7.</span> <span class="toc-text">MarkdownEditing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Preview"><span class="toc-number">1.3.8.</span> <span class="toc-text">Markdown Preview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Theme-Dark_Material"><span class="toc-number">1.3.9.</span> <span class="toc-text">Theme-Dark Material</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BracketHighlighter"><span class="toc-number">1.3.10.</span> <span class="toc-text">BracketHighlighter</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
