@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Chgocn的博客">
 <meta property="og:description" content="对自己的 Android Studio 插件进行一个系统整理">
 <meta property="og:image" content="http://7vik6r.com1.z0.glb.clouddn.com/image/jpg/blog/studio-hero.jpg">
-<meta property="og:updated_time" content="2016-08-02T08:19:29.511Z">
+<meta property="og:updated_time" content="2016-08-16T03:30:18.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的 Android Studio 插件（不间断更新）">
 <meta name="twitter:description" content="对自己的 Android Studio 插件进行一个系统整理">
@@ -321,7 +321,14 @@
 <li><p>重启Android Studio</p>
 </li>
 </ol>
-<h3 id="具体">具体</h3><h4 id="2016-08-02更新">2016.08.02更新</h4><ul>
+<h3 id="具体">具体</h3><h4 id="2016-08-16添加yaml支持">2016.08.16添加yaml支持</h4><ul>
+<li><strong>SnakeYAML</strong>：<a href="https://plugins.jetbrains.com/plugin/8142?pr=idea" target="_blank" rel="external">https://plugins.jetbrains.com/plugin/8142?pr=idea</a></li>
+<li><strong>YAML/Ansible support</strong>：<a href="https://plugins.jetbrains.com/plugin/7792?pr=idea" target="_blank" rel="external">https://plugins.jetbrains.com/plugin/7792?pr=idea</a></li>
+</ul>
+<h4 id="2016-08-04更新">2016.08.04更新</h4><ul>
+<li><strong>PlantUML</strong>：<a href="https://plugins.jetbrains.com/plugin/7017?pr=phpStorm" target="_blank" rel="external">https://plugins.jetbrains.com/plugin/7017?pr=phpStorm</a></li>
+</ul>
+<h4 id="2016-08-02更新">2016.08.02更新</h4><ul>
 <li><strong>WakaTime</strong>：<a href="https://github.com/wakatime/jetbrains-wakatime" target="_blank" rel="external">https://github.com/wakatime/jetbrains-wakatime</a></li>
 </ul>
 <h4 id="2016-07-23更新">2016.07.23更新</h4><ul>
@@ -356,7 +363,7 @@
         <p><span>本文标题:</span><a href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
         <p><span>发布时间:</span>2016-07-23, 09:45:51</p>
-        <p><span>最后更新:</span>2016-08-02, 16:19:29</p>
+        <p><span>最后更新:</span>2016-08-16, 11:30:18</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/23/Android-Studio-Plugins/" title="我的 Android Studio 插件（不间断更新）">http://yoursite.com/2016/07/23/Android-Studio-Plugins/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/23/Android-Studio-Plugins/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -392,7 +399,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插件"><span class="toc-number">2.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整合"><span class="toc-number">2.1.</span> <span class="toc-text">整合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-number">2.2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#具体"><span class="toc-number">2.3.</span> <span class="toc-text">具体</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-08-02更新"><span class="toc-number">2.3.1.</span> <span class="toc-text">2016.08.02更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-07-23更新"><span class="toc-number">2.3.2.</span> <span class="toc-text">2016.07.23更新</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.4.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插件"><span class="toc-number">2.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整合"><span class="toc-number">2.1.</span> <span class="toc-text">整合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-number">2.2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#具体"><span class="toc-number">2.3.</span> <span class="toc-text">具体</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-08-16添加yaml支持"><span class="toc-number">2.3.1.</span> <span class="toc-text">2016.08.16添加yaml支持</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-08-04更新"><span class="toc-number">2.3.2.</span> <span class="toc-text">2016.08.04更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-08-02更新"><span class="toc-number">2.3.3.</span> <span class="toc-text">2016.08.02更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2016-07-23更新"><span class="toc-number">2.3.4.</span> <span class="toc-text">2016.07.23更新</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.4.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
         
     </div>
     <style>
