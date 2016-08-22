@@ -37,8 +37,6 @@
 
 
 
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
 
 
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -49,7 +47,7 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css">
 
 
 
@@ -64,7 +62,7 @@
 <script>
     var yiliaConfig = {
         fancybox: true,
-        animate: true,
+        animate: false,
         isHome: false,
         isPost: true,
         isArchive: false,
@@ -189,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
                     </div>
                 </section>
                 
@@ -305,23 +303,23 @@
       
           
         <p>整理和总结优秀的安卓蓝牙使用。<br><a id="more"></a></p>
-<h2 id="必读">必读</h2><p>Android关于蓝牙的定义可分为普通蓝牙和低功耗蓝牙（俗称Bluetooth Low Energy,依以下简称Ble）。一般蓝牙设备如果支持Ble,会明确标注。那么作为开发人员，我们就必须根据实际情况去使用不同的api。</p>
-<h2 id="普通蓝牙通信">普通蓝牙通信</h2><h3 id="BluetoothAdapter简介"><a href="http://www.open-open.com/lib/view/open1390879771695.html" target="_blank" rel="external">BluetoothAdapter简介</a></h3><p>BluetoothAdapter代表了移动设备的本地的蓝牙适配器, 通过该蓝牙适配器可以对蓝牙进行基本操作, 例如 : 启动设备发现(startDiscovery), 获取已配对设备(getBoundedDevices), 通过mac蓝牙地址获取蓝牙设备(getRemoteDevice), 从其它设备创建一个监听连接(listenUsingRfcommWithServiceRecord);<br>注：普通蓝牙设备会不断的往外发送广播。所以我们只需要接收广播就可以拿到蓝牙设备的对象。</p>
-<h3 id="关于普通蓝牙的几个概念">关于普通蓝牙的几个概念</h3><ul>
+<h2 id="必读"><a href="#必读" class="headerlink" title="必读"></a>必读</h2><p>Android关于蓝牙的定义可分为普通蓝牙和低功耗蓝牙（俗称Bluetooth Low Energy,依以下简称Ble）。一般蓝牙设备如果支持Ble,会明确标注。那么作为开发人员，我们就必须根据实际情况去使用不同的api。</p>
+<h2 id="普通蓝牙通信"><a href="#普通蓝牙通信" class="headerlink" title="普通蓝牙通信"></a>普通蓝牙通信</h2><h3 id="BluetoothAdapter简介"><a href="#BluetoothAdapter简介" class="headerlink" title="BluetoothAdapter简介"></a><a href="http://www.open-open.com/lib/view/open1390879771695.html" target="_blank" rel="external">BluetoothAdapter简介</a></h3><p>BluetoothAdapter代表了移动设备的本地的蓝牙适配器, 通过该蓝牙适配器可以对蓝牙进行基本操作, 例如 : 启动设备发现(startDiscovery), 获取已配对设备(getBoundedDevices), 通过mac蓝牙地址获取蓝牙设备(getRemoteDevice), 从其它设备创建一个监听连接(listenUsingRfcommWithServiceRecord);<br>注：普通蓝牙设备会不断的往外发送广播。所以我们只需要接收广播就可以拿到蓝牙设备的对象。</p>
+<h3 id="关于普通蓝牙的几个概念"><a href="#关于普通蓝牙的几个概念" class="headerlink" title="关于普通蓝牙的几个概念"></a>关于普通蓝牙的几个概念</h3><ul>
 <li>服务端：作为输出流的对象。一般指的是外来蓝牙设备。</li>
 <li>客户端：作为输入流的对象。一般指的是手机。</li>
 <li>Socket：服务端和客户端的连接对象，用于客户端接收和发送数据。</li>
 <li>BluetoothDevice: 蓝牙设备，也就是指的服务端。主要包括MAC(地址，每个蓝牙设备的地址都是唯一的。),Name(蓝牙设备显示的名称)等。</li>
 <li>UUID：标识蓝牙设备的唯一特征码，类似于手机的UUID。</li>
 </ul>
-<h3 id="工作流程">工作流程</h3><ol>
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol>
 <li>首先开启蓝牙</li>
 <li>搜索可用设备</li>
 <li>创建蓝牙socket，获取输入输出流</li>
 <li>读取和写入数据</li>
 <li>断开连接关闭蓝牙</li>
 </ol>
-<h2 id="蓝牙低功耗">蓝牙低功耗</h2><p>占坑（明天再写）。</p>
+<h2 id="蓝牙低功耗"><a href="#蓝牙低功耗" class="headerlink" title="蓝牙低功耗"></a>蓝牙低功耗</h2><p>占坑（明天再写）。</p>
 
       
     </div>
@@ -407,9 +405,46 @@
         }
 
         
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/07/19/Android蓝牙使用总结/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
 </div>
     
@@ -433,7 +468,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 
@@ -454,31 +489,27 @@
             </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
     </div>
 </footer>
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 

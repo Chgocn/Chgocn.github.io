@@ -15,22 +15,16 @@
 
 
 
-<meta name="description" content="中文名   小刚
-英文名   chgocn/eshany
-简单介绍   毕业于安徽一个普通大学。爱好互联网、软件。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chgocn的博客">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="记录学习docker中常用的命令。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker基本命令记录">
+<meta property="og:url" content="http://yoursite.com/2016/08/22/Docker-Frequently-Used-Command/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="中文名   小刚
-英文名   chgocn/eshany
-简单介绍   毕业于安徽一个普通大学。爱好互联网、软件。">
-<meta property="og:updated_time" content="2016-07-20T09:21:40.000Z">
+<meta property="og:description" content="记录学习docker中常用的命令。">
+<meta property="og:updated_time" content="2016-08-22T08:41:31.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chgocn的博客">
-<meta name="twitter:description" content="中文名   小刚
-英文名   chgocn/eshany
-简单介绍   毕业于安徽一个普通大学。爱好互联网、软件。">
+<meta name="twitter:title" content="Docker基本命令记录">
+<meta name="twitter:description" content="记录学习docker中常用的命令。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Chgocn的博客</title>
+<title>Docker基本命令记录 | Chgocn的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -70,7 +64,7 @@
         fancybox: true,
         animate: false,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -264,11 +258,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Docker-Frequently-Used-Command" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2016-08-17T06:33:31.008Z" itemprop="datePublished">Aug 17 2016</time>
+      <a href="/2016/08/22/Docker-Frequently-Used-Command/" class="article-date">
+      <time datetime="2016-08-22T03:07:00.000Z" itemprop="datePublished">Aug 22 2016</time>
 </a>
 
 
@@ -279,42 +273,143 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Docker基本命令记录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/language/">language</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
-
-
-          
-        <h2 id="中文名"><a href="#中文名" class="headerlink" title="中文名"></a>中文名</h2><p>   小刚</p>
-<h2 id="英文名"><a href="#英文名" class="headerlink" title="英文名"></a>英文名</h2><p>   chgocn/eshany</p>
-<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>   毕业于安徽一个普通大学。爱好互联网、软件。</p>
-
+        <h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h4><pre><code>$ docker pull image_name:image_version//eg:ruby:2.1
+</code></pre><h4 id="查看下载过的images"><a href="#查看下载过的images" class="headerlink" title="查看下载过的images"></a>查看下载过的images</h4><pre><code>$ docker images
+</code></pre><h4 id="运行实例"><a href="#运行实例" class="headerlink" title="运行实例"></a>运行实例</h4><pre><code>//--name为指定缩略名，下次可直接用docker start启动，-d为运行后进入实例，-p为指定端口映射
+$ docker run --name &quot;oc&quot; -d -p 80:80 owncloud:9
+//以后就可以使用缩略名启动
+$ docker stop oc
+$ docker start oc
+</code></pre><h4 id="查看Docker运行的实例"><a href="#查看Docker运行的实例" class="headerlink" title="查看Docker运行的实例"></a>查看Docker运行的实例</h4><pre><code>$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+87289a2598e7        owncloud:9          &quot;/entrypoint.sh apach&quot;   About an hour ago   Up About an hour    0.0.0.0:80-&gt;80/tcp   oc
+1305
+</code></pre><h4 id="进入Docker实例"><a href="#进入Docker实例" class="headerlink" title="进入Docker实例"></a>进入Docker实例</h4><pre><code>//查看PID,
+$ docker inspect --format &quot;{{ .State.Pid }}&quot; 87289a2598e7
+//进入PID对应的Container实例
+$ nsenter --target 1305 --mount --uts --ipc --net --pid
+</code></pre><h4 id="停止Docker容器"><a href="#停止Docker容器" class="headerlink" title="停止Docker容器"></a>停止Docker容器</h4><pre><code>//通过ps获得所有运行的容器和对应的ID
+$ docker ps
+//指定ID进行停止
+$ docker stop 87289a2598e7
+//也可以指定name停止
+$ docker stop oc
+</code></pre><h4 id="删除Docker容器"><a href="#删除Docker容器" class="headerlink" title="删除Docker容器"></a>删除Docker容器</h4><pre><code>$ docker rm 87289a2598e7
+//或者指定name进行容器删除
+$ docker rm oc
+</code></pre><h4 id="删除Docker镜像"><a href="#删除Docker镜像" class="headerlink" title="删除Docker镜像"></a>删除Docker镜像</h4><pre><code>$ docker rmi owncloud:9
+</code></pre><h4 id="修改容器并提交"><a href="#修改容器并提交" class="headerlink" title="修改容器并提交"></a>修改容器并提交</h4><pre><code>//首先进入容器
+//然后进行修改,增加ldap认证支持
+//进入PID对应的容器
+$ nsenter --target 1305 --mount --uts --ipc --net --pid
+//更新源
+# apt-get update
+//安装需要的组件
+# apt-get install libldap2-dev
+# docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu
+# docker-php-ext-install ldap
+//退出容器
+# exit
+//提交对容器的修改
+$ docker commit 87289a2598e7 owncloud/ldap
+//重启容器
+$ docker stop oc
+$ docker run --name ocldap -d -p 80:80 owncloud/ldap
+</code></pre>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
+        <p><span>发布时间:</span>2016-08-22, 11:07:00</p>
+        <p><span>最后更新:</span>2016-08-22, 16:41:31</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/22/Docker-Frequently-Used-Command/" title="Docker基本命令记录">http://yoursite.com/2016/08/22/Docker-Frequently-Used-Command/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/08/22/Docker-Frequently-Used-Command/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/08/22/SSH-Tutorial/">
+                    git/ssh 简述
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/08/19/Android-Developer-Envirement-Build-Note/">
+                    Android开发环境搭建
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#下载镜像"><span class="toc-number">1.</span> <span class="toc-text">下载镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看下载过的images"><span class="toc-number">2.</span> <span class="toc-text">查看下载过的images</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行实例"><span class="toc-number">3.</span> <span class="toc-text">运行实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看Docker运行的实例"><span class="toc-number">4.</span> <span class="toc-text">查看Docker运行的实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进入Docker实例"><span class="toc-number">5.</span> <span class="toc-text">进入Docker实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#停止Docker容器"><span class="toc-number">6.</span> <span class="toc-text">停止Docker容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除Docker容器"><span class="toc-number">7.</span> <span class="toc-text">删除Docker容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除Docker镜像"><span class="toc-number">8.</span> <span class="toc-text">删除Docker镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改容器并提交"><span class="toc-number">9.</span> <span class="toc-text">修改容器并提交</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
 
 
 
@@ -323,7 +418,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="about/index.html" data-title="" data-url="http://yoursite.com/about/index.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/08/22/Docker-Frequently-Used-Command/" data-title="Docker基本命令记录" data-url="http://yoursite.com/2016/08/22/Docker-Frequently-Used-Command/"></div>
     <script>
         var duoshuoQuery = {short_name:"chgocn"};
         var loadComment = function(){
@@ -336,7 +431,7 @@
         
             // Add comment count
             $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=about/index.html&callback=?";
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/08/22/Docker-Frequently-Used-Command/&callback=?";
                 $.getJSON(jsonUrl, function(result){
                     $.each(result.response, function(i, field){
                         var value = field.comments;
@@ -378,6 +473,26 @@
 </div>
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/08/22/SSH-Tutorial/" title="上一篇: git/ssh 简述">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/08/19/Android-Developer-Envirement-Build-Note/" title="下一篇: Android开发环境搭建">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 

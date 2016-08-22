@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
+<meta name="description" content="#前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android深入学习导航">
 <meta property="og:url" content="http://yoursite.com/2015/12/16/android-navigation/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
+<meta property="og:description" content="#前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
 <meta property="og:updated_time" content="2016-07-09T02:56:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android深入学习导航">
-<meta name="twitter:description" content="前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
+<meta name="twitter:description" content="#前言最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -37,8 +37,6 @@
 
 
 
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
 
 
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -49,7 +47,7 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css">
 
 
 
@@ -64,7 +62,7 @@
 <script>
     var yiliaConfig = {
         fancybox: true,
-        animate: true,
+        animate: false,
         isHome: false,
         isPost: true,
         isArchive: false,
@@ -189,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
                     </div>
                 </section>
                 
@@ -300,8 +298,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="前言">前言</h1><p>最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。<br><a id="more"></a></p>
-<h1 id="Android_四大组件">Android 四大组件</h1><p>1、Android 四大组件之 Activity 的生命周期以及使用</p>
+        <p>#前言<br>最近在做公司的项目，设计到AIDL ，Service，BroadCastReceiver，Interface编程，Jni，GPS，蓝牙，G-sensor等各种Android知识，发现对有些原理的实现还并不是太熟悉，故有此文，一来供自己参考，二来不断学习。等待慢慢补齐。<br><a id="more"></a></p>
+<p>#Android 四大组件<br>1、Android 四大组件之 Activity 的生命周期以及使用</p>
 <ul>
 <li>Activity之间数据传递-Intent的学习</li>
 <li>startActivityForResult(intent, requestCode)的使用</li>
@@ -313,7 +311,9 @@
 <li>Service生命周期原理 + 实际操作<br>4、Android 四大元件之 Content Provider 的生命周期以及使用</li>
 </ul>
 <hr>
-<h1 id="Android_五大布局">Android 五大布局</h1><h2 id="五大Layout_原理架构">五大Layout 原理架构</h2><ol>
+<p>#Android 五大布局</p>
+<p>##五大Layout 原理架构</p>
+<ol>
 <li>Android  组件布局 ( ㄧ ) LinearLayout</li>
 <li>Android  组件布局 ( 二 ) RelativeLayout</li>
 <li>Android  组件布局 ( 三 ) TableLayout</li>
@@ -321,12 +321,18 @@
 <li>Android  组件布局 ( 五 ) AbsoluteLayout</li>
 </ol>
 <hr>
-<h1 id="Android_消息机制以及事件传递">Android 消息机制以及事件传递</h1><hr>
-<h1 id="Android_数据存储">Android 数据存储</h1><hr>
-<h1 id="Android_自定义控件">Android 自定义控件</h1><hr>
-<h1 id="Android_设计模式">Android 设计模式</h1><hr>
-<h1 id="Android_Interface编程">Android Interface编程</h1><hr>
-<h1 id="Android_高阶之路(软硬兼备)">Android 高阶之路(软硬兼备)</h1><ul>
+<p>#Android 消息机制以及事件传递</p>
+<hr>
+<p>#Android 数据存储</p>
+<hr>
+<p>#Android 自定义控件</p>
+<hr>
+<p>#Android 设计模式</p>
+<hr>
+<p>#Android Interface编程</p>
+<hr>
+<p>#Android 高阶之路(软硬兼备)</p>
+<ul>
 <li>NDK</li>
 <li>Gps</li>
 <li>Bluetooth</li>
@@ -335,7 +341,8 @@
 <li>SQlite</li>
 </ul>
 <hr>
-<h1 id="Android_杂项_-_非关程式">Android 杂项 -  非关程式</h1><ul>
+<p>#Android 杂项 -  非关程式</p>
+<ul>
 <li>发布 apk 之在 android 专案中 import 第三方提供的 library</li>
 <li>发布 apk 之  build   一个 apk 可能遇到的状况</li>
 <li>手动打包 APK 及 APK Decompile</li>
@@ -346,7 +353,8 @@
 <li>Eclipse</li>
 </ul>
 <hr>
-<h1 id="其它技术">其它技术</h1><ul>
+<p>#其它技术</p>
+<ul>
 <li>数据加密（MD5、AES）</li>
 <li>正则表达式</li>
 <li>VCS</li>
@@ -398,7 +406,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_四大组件"><span class="toc-number">2.</span> <span class="toc-text">Android 四大组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_五大布局"><span class="toc-number">3.</span> <span class="toc-text">Android 五大布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五大Layout_原理架构"><span class="toc-number">3.1.</span> <span class="toc-text">五大Layout 原理架构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_消息机制以及事件传递"><span class="toc-number">4.</span> <span class="toc-text">Android 消息机制以及事件传递</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_数据存储"><span class="toc-number">5.</span> <span class="toc-text">Android 数据存储</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_自定义控件"><span class="toc-number">6.</span> <span class="toc-text">Android 自定义控件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_设计模式"><span class="toc-number">7.</span> <span class="toc-text">Android 设计模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_Interface编程"><span class="toc-number">8.</span> <span class="toc-text">Android Interface编程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_高阶之路(软硬兼备)"><span class="toc-number">9.</span> <span class="toc-text">Android 高阶之路(软硬兼备)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android_杂项_-_非关程式"><span class="toc-number">10.</span> <span class="toc-text">Android 杂项 -  非关程式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其它技术"><span class="toc-number">11.</span> <span class="toc-text">其它技术</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -436,9 +444,46 @@
         }
 
         
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2015/12/16/android-navigation/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
 </div>
     
@@ -462,7 +507,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 
@@ -483,31 +528,27 @@
             </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
     </div>
 </footer>
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 

@@ -26,6 +26,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PagerSlidingTabStrip+ViewPager实现二级导签">
 <meta name="twitter:description" content="效果：实现的功能：点击一级导航，会自动切换到二级导航，滑动ViewPager,如果二级导航到最后一个数据，会自动切换到一级导航。">
+<meta name="twitter:image" content="http://7vik6r.com1.z0.glb.clouddn.com/07FS0E@4%28URPD_D%60EQ5V%281D.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -38,8 +39,6 @@
 
 
 
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
 
 
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -50,7 +49,7 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css">
 
 
 
@@ -65,7 +64,7 @@
 <script>
     var yiliaConfig = {
         fancybox: true,
-        animate: true,
+        animate: false,
         isHome: false,
         isPost: true,
         isArchive: false,
@@ -190,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
                     </div>
                 </section>
                 
@@ -307,40 +306,40 @@
           
         <p>效果：<br><img src="http://7vik6r.com1.z0.glb.clouddn.com/07FS0E@4%28URPD_D%60EQ5V%281D.png" alt="二级导航效果图"><br>实现的功能：点击一级导航，会自动切换到二级导航，滑动ViewPager,如果二级导航到最后一个数据，会自动切换到一级导航。<br><a id="more"></a><br>PagerSlidingTabStrip github下载地址：<a href="https://github.com/astuetz/PagerSlidingTabStrip" target="_blank" rel="external">https://github.com/astuetz/PagerSlidingTabStrip</a><br>PagerSlidingTabStrip 源码级分析地址：<a href="http://a.codekk.com/detail/Android/ayyb1988/PagerSlidingTabStrip%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90" target="_blank" rel="external">http://a.codekk.com/detail/Android/ayyb1988/PagerSlidingTabStrip%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90</a><br>思路：Activity中使用PagerSlidingTabStrip与ViewPager绑定，实现一级导航。其次在ViewPager中加载Fragment，最后在Fragment中再次使用PagerSlidingTabStrip与ViewPager绑定，至此结束。<br>Activity关键布局：</p>
 <pre><code>&lt;com.xxx.view.PagerSlidingTabStrip
-    android:<span class="variable">id=</span><span class="string">"@+id/tabs"</span>
-    android:<span class="variable">layout_width=</span><span class="string">"wrap_content"</span>
-    android:<span class="variable">layout_height=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">layout_centerVertical=</span><span class="string">"true"</span>
-    android:<span class="variable">layout_toLeftOf=</span><span class="string">"@+id/layout_search"</span>
-    android:<span class="variable">textColor=</span><span class="string">"@color/text"</span>
-    android:<span class="variable">textStyle=</span><span class="string">"normal"</span>                   
-    app:<span class="variable">pstsDividerColor=</span><span class="string">"#00000000"</span>
-    app:<span class="variable">pstsIndicatorColor=</span><span class="string">"#fff99d1a"</span>
-    android:<span class="variable">layout_alignParentLeft=</span><span class="string">"true"</span>
-    android:<span class="variable">layout_alignParentStart=</span><span class="string">"true"</span>
-    app:<span class="variable">pstsTextAllCaps=</span><span class="string">"false"</span>
-    app:<span class="variable">pstsUnderlineColor=</span><span class="string">"#00000000"</span>/&gt;
+    android:id=&quot;@+id/tabs&quot;
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:layout_centerVertical=&quot;true&quot;
+    android:layout_toLeftOf=&quot;@+id/layout_search&quot;
+    android:textColor=&quot;@color/text&quot;
+    android:textStyle=&quot;normal&quot;                   
+    app:pstsDividerColor=&quot;#00000000&quot;
+    app:pstsIndicatorColor=&quot;#fff99d1a&quot;
+    android:layout_alignParentLeft=&quot;true&quot;
+    android:layout_alignParentStart=&quot;true&quot;
+    app:pstsTextAllCaps=&quot;false&quot;
+    app:pstsUnderlineColor=&quot;#00000000&quot;/&gt;
 
 &lt;com.xxx.view.ViewPager
-    android:<span class="variable">id=</span><span class="string">"@+id/vp_photo"</span>
-    android:<span class="variable">layout_width=</span><span class="string">"match_parent"</span>
-    android:<span class="variable">layout_height=</span><span class="string">"wrap_content"</span>
-    android:<span class="variable">layout_below=</span><span class="string">"@id/tabs"</span>/&gt;
+    android:id=&quot;@+id/vp_photo&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:layout_below=&quot;@id/tabs&quot;/&gt;
 </code></pre><p>Activity中onCreate():</p>
-<pre><code>mTabs = <span class="params">(PagerSlidingTabStrip)</span> findViewById<span class="params">(R.id.tabs)</span>;
-mPhotoGridPager = <span class="params">(ViewPager)</span> findViewById<span class="params">(R.id.vp_photo)</span>;
-<span class="comment">//load Fragment</span>
-mFragmentAdapter = new PhotoTabAdapter<span class="params">(this,imgsIndex.getTypes<span class="params">()</span>)</span>;
-mPhotoGridPager.setAdapter<span class="params">(mFragmentAdapter)</span>;
-mTabs.setViewPager<span class="params">(mPhotoGridPager)</span>;
-mTabs.setSelectedTextColor<span class="params">(Color.BLACK)</span>;
+<pre><code>mTabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+mPhotoGridPager = (ViewPager) findViewById(R.id.vp_photo);
+//load Fragment
+mFragmentAdapter = new PhotoTabAdapter(this,imgsIndex.getTypes());
+mPhotoGridPager.setAdapter(mFragmentAdapter);
+mTabs.setViewPager(mPhotoGridPager);
+mTabs.setSelectedTextColor(Color.BLACK);
 </code></pre><p>Fragment中布局与Activity类似，故在此省略。<br>Fragment中onCreateView():</p>
-<pre><code>mSubTabs = <span class="params">(PagerSlidingTabStrip)</span> view.findViewById<span class="params">(R.id.tabs_sub)</span>;
-mPhotoGrid = <span class="params">(PhotoViewPager)</span> view.findViewById<span class="params">(R.id.vp_photo_tab)</span>;
-<span class="comment">// init sub tabs</span>
-mSubTabsAdapter = new PhotoGalleryPagerAdapter<span class="params">(getChildFragmentManager<span class="params">()</span>,type)</span>;
-mPhotoGrid.setAdapter<span class="params">(mSubTabsAdapter)</span>;
-mSubTabs.setViewPager<span class="params">(mPhotoGrid)</span>;
+<pre><code>mSubTabs = (PagerSlidingTabStrip) view.findViewById(R.id.tabs_sub);
+mPhotoGrid = (PhotoViewPager) view.findViewById(R.id.vp_photo_tab);
+// init sub tabs
+mSubTabsAdapter = new PhotoGalleryPagerAdapter(getChildFragmentManager(),type);
+mPhotoGrid.setAdapter(mSubTabsAdapter);
+mSubTabs.setViewPager(mPhotoGrid);
 </code></pre><p>注意：mSubTabsAdapter = new PhotoGalleryPagerAdapter(getChildFragmentManager(),type);此处必须使用getChildFragmentManager().具体参考：<a href="http://blog.csdn.net/mybook1122/article/details/24003343" target="_blank" rel="external">http://blog.csdn.net/mybook1122/article/details/24003343</a><br>关于二级导航的样式（即选中的tab文字高亮）请参考：<a href="http://blog.csdn.net/guolin_blog/article/details/26365683" target="_blank" rel="external">http://blog.csdn.net/guolin_blog/article/details/26365683</a></p>
 
       
@@ -427,9 +426,46 @@ mSubTabs.setViewPager<span class="params">(mPhotoGrid)</span>;
         }
 
         
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
 </div>
     
@@ -453,7 +489,7 @@ mSubTabs.setViewPager<span class="params">(mPhotoGrid)</span>;
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 
@@ -474,31 +510,27 @@ mSubTabs.setViewPager<span class="params">(mPhotoGrid)</span>;
             </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
     </div>
 </footer>
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 

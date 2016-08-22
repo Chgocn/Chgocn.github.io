@@ -37,8 +37,6 @@
 
 
 
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
 
 
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -49,7 +47,7 @@
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css">
 
 
 
@@ -64,7 +62,7 @@
 <script>
     var yiliaConfig = {
         fancybox: true,
-        animate: true,
+        animate: false,
         isHome: false,
         isPost: true,
         isArchive: false,
@@ -189,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Overlay-Icon/">Overlay Icon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PagerSlidingTabStrip/">PagerSlidingTabStrip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlantUML/">PlantUML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ViewPager/">ViewPager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ble/">ble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bluetooth/">bluetooth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tortoisegit/">tortoisegit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二级导航/">二级导航</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反编译/">反编译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
                     </div>
                 </section>
                 
@@ -305,259 +303,259 @@
       
           
         <p>整理和总结优秀的git学习教程。<br><a id="more"></a></p>
-<h2 id="单词翻译">单词翻译</h2><pre><code><span class="label">Remote:</span> 远程仓库
-<span class="label">Repository:</span> 仓库区（本地仓库）
+<h2 id="单词翻译"><a href="#单词翻译" class="headerlink" title="单词翻译"></a>单词翻译</h2><pre><code>Remote: 远程仓库
+Repository: 仓库区（本地仓库）
 Index / Stage：暂存区
 Workspace：工作区
-<span class="label">Origin:</span> 远程主机 
+Origin: 远程主机 
 Master：主干（用于发布realse版本）
-<span class="label">Branch:</span> 分支（用于处理一些耗时的工作，修复bug,开发新功能,可以有多个分支）
-</code></pre><h2 id="常用命令">常用命令</h2><h3 id="新建代码库">新建代码库</h3><pre><code><span class="comment"># 在当前目录新建一个Git代码库</span>
-<span class="variable">$ </span>git init
+Branch: 分支（用于处理一些耗时的工作，修复bug,开发新功能,可以有多个分支）
+</code></pre><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="新建代码库"><a href="#新建代码库" class="headerlink" title="新建代码库"></a>新建代码库</h3><pre><code># 在当前目录新建一个Git代码库
+$ git init
 
-<span class="comment"># 新建一个目录，将其初始化为Git代码库</span>
-<span class="variable">$ </span>git init [project-name]
+# 新建一个目录，将其初始化为Git代码库
+$ git init [project-name]
 
-<span class="comment"># 下载一个项目和它的整个代码历史</span>
-<span class="variable">$ </span>git clone [project-url] 
+# 下载一个项目和它的整个代码历史
+$ git clone [project-url] 
 
-<span class="comment"># 仅仅下载某个项目的分支</span>
-<span class="variable">$ </span>git clone -b [branch-name] --single-branch [project-url]
-</code></pre><h3 id="配置">配置</h3><pre><code><span class="comment"># 显示当前的Git配置</span>
-<span class="variable">$ </span>git config --list
+# 仅仅下载某个项目的分支
+$ git clone -b [branch-name] --single-branch [project-url]
+</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><pre><code># 显示当前的Git配置
+$ git config --list
 
-<span class="comment"># 编辑Git配置文件</span>
-<span class="variable">$ </span>git config -e [--global]
+# 编辑Git配置文件
+$ git config -e [--global]
 
-<span class="comment"># 设置提交代码时的用户信息</span>
-<span class="variable">$ </span>git config [--global] user.name <span class="string">"[name]"</span>
-<span class="variable">$ </span>git config [--global] user.email <span class="string">"[email address]"</span>
-</code></pre><h3 id="增加/删除文件">增加/删除文件</h3><pre><code><span class="preprocessor"># 添加指定文件到暂存区</span>
+# 设置提交代码时的用户信息
+$ git config [--global] user.name &quot;[name]&quot;
+$ git config [--global] user.email &quot;[email address]&quot;
+</code></pre><h3 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h3><pre><code># 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 
-<span class="preprocessor"># 添加指定目录到暂存区，包括子目录</span>
+# 添加指定目录到暂存区，包括子目录
 $ git add [dir]
 
-<span class="preprocessor"># 添加当前目录的所有文件到暂存区</span>
+# 添加当前目录的所有文件到暂存区
 $ git add .
 
-<span class="preprocessor"># 添加每个变化前，都会要求确认</span>
-<span class="preprocessor"># 对于同一个文件的多处变化，可以实现分次提交</span>
+# 添加每个变化前，都会要求确认
+# 对于同一个文件的多处变化，可以实现分次提交
 $ git add -p
 
-<span class="preprocessor"># 删除工作区文件，并且将这次删除放入暂存区</span>
+# 删除工作区文件，并且将这次删除放入暂存区
 $ git rm [file1] [file2] ...
 
-<span class="preprocessor"># 停止追踪指定文件，但该文件会保留在工作区</span>
+# 停止追踪指定文件，但该文件会保留在工作区
 $ git rm --cached [file]
 
-<span class="preprocessor"># 改名文件，并且将这个改名放入暂存区</span>
+# 改名文件，并且将这个改名放入暂存区
 $ git mv [file-original] [file-renamed]
-</code></pre><h3 id="代码提交">代码提交</h3><pre><code><span class="preprocessor"># 提交暂存区到仓库区</span>
+</code></pre><h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><pre><code># 提交暂存区到仓库区
 $ git commit -m [message]
 
-<span class="preprocessor"># 提交暂存区的指定文件到仓库区</span>
+# 提交暂存区的指定文件到仓库区
 $ git commit [file1] [file2] ... -m [message]
 
-<span class="preprocessor"># 提交工作区自上次commit之后的变化，直接到仓库区</span>
+# 提交工作区自上次commit之后的变化，直接到仓库区
 $ git commit -a
 
-<span class="preprocessor"># 提交时显示所有diff信息</span>
+# 提交时显示所有diff信息
 $ git commit -v
 
-<span class="preprocessor"># 使用一次新的commit，替代上一次提交</span>
-<span class="preprocessor"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span>
+# 使用一次新的commit，替代上一次提交
+# 如果代码没有任何新变化，则用来改写上一次commit的提交信息
 $ git commit --amend -m [message]
 
-<span class="preprocessor"># 重做上一次commit，并包括指定文件的新变化</span>
+# 重做上一次commit，并包括指定文件的新变化
 $ git commit --amend [file1] [file2] ...
-</code></pre><h3 id="分支">分支</h3><pre><code><span class="comment"># 列出所有本地分支</span>
-<span class="variable">$ </span>git branch
+</code></pre><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><pre><code># 列出所有本地分支
+$ git branch
 
-<span class="comment"># 列出所有远程分支</span>
-<span class="variable">$ </span>git branch -r
+# 列出所有远程分支
+$ git branch -r
 
-<span class="comment"># 列出所有本地分支和远程分支</span>
-<span class="variable">$ </span>git branch -a
+# 列出所有本地分支和远程分支
+$ git branch -a
 
-<span class="comment"># 新建一个分支，但依然停留在当前分支</span>
-<span class="variable">$ </span>git branch [branch-name]
+# 新建一个分支，但依然停留在当前分支
+$ git branch [branch-name]
 
-<span class="comment"># 新建一个分支，并切换到该分支</span>
-<span class="variable">$ </span>git checkout -b [branch]
+# 新建一个分支，并切换到该分支
+$ git checkout -b [branch]
 
-<span class="comment"># 新建一个分支，指向指定commit</span>
-<span class="variable">$ </span>git branch [branch] [commit]
+# 新建一个分支，指向指定commit
+$ git branch [branch] [commit]
 
-<span class="comment"># 新建一个分支，与指定的远程分支建立追踪关系</span>
-<span class="variable">$ </span>git branch --track [branch] [remote-branch]
+# 新建一个分支，与指定的远程分支建立追踪关系
+$ git branch --track [branch] [remote-branch]
 
-<span class="comment"># 切换到指定分支，并更新工作区</span>
-<span class="variable">$ </span>git checkout [branch-name]
+# 切换到指定分支，并更新工作区
+$ git checkout [branch-name]
 
-<span class="comment"># 切换到上一个分支</span>
-<span class="variable">$ </span>git checkout -
+# 切换到上一个分支
+$ git checkout -
 
-<span class="comment"># 建立追踪关系，在现有分支与指定的远程分支之间</span>
-<span class="variable">$ </span>git branch --set-upstream [branch] [remote-branch]
+# 建立追踪关系，在现有分支与指定的远程分支之间
+$ git branch --set-upstream [branch] [remote-branch]
 
-<span class="comment"># 合并指定分支到当前分支</span>
-<span class="variable">$ </span>git merge [branch]
+# 合并指定分支到当前分支
+$ git merge [branch]
 
-<span class="comment"># 合并指定分支到当前分支不使用fast forward并生成一个节点且不自动生成commit</span>
-<span class="variable">$ </span>git merge [branch] --no-ff no-commit
+# 合并指定分支到当前分支不使用fast forward并生成一个节点且不自动生成commit
+$ git merge [branch] --no-ff no-commit
 
-<span class="comment"># 选择一个commit，合并进当前分支</span>
-<span class="variable">$ </span>git cherry-pick [commit]
+# 选择一个commit，合并进当前分支
+$ git cherry-pick [commit]
 
-<span class="comment"># 删除分支</span>
-<span class="variable">$ </span>git branch -d [branch-name]
+# 删除分支
+$ git branch -d [branch-name]
 
-<span class="comment"># 删除远程分支</span>
-<span class="variable">$ </span>git push origin --delete [branch-name]
-<span class="variable">$ </span>git branch -dr [remote/branch]
-</code></pre><h3 id="标签">标签</h3><pre><code><span class="comment"># 列出所有tag</span>
-<span class="variable">$ </span>git tag
+# 删除远程分支
+$ git push origin --delete [branch-name]
+$ git branch -dr [remote/branch]
+</code></pre><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><pre><code># 列出所有tag
+$ git tag
 
-<span class="comment"># 新建一个tag在当前commit</span>
-<span class="variable">$ </span>git tag [tag]
+# 新建一个tag在当前commit
+$ git tag [tag]
 
-<span class="comment"># 新建一个tag在指定commit</span>
-<span class="variable">$ </span>git tag [tag] [commit]
+# 新建一个tag在指定commit
+$ git tag [tag] [commit]
 
-<span class="comment"># 删除本地tag</span>
-<span class="variable">$ </span>git tag -d [tag]
+# 删除本地tag
+$ git tag -d [tag]
 
-<span class="comment"># 删除远程tag</span>
-<span class="variable">$ </span>git push origin <span class="symbol">:refs/tags/</span>[tagName]
+# 删除远程tag
+$ git push origin :refs/tags/[tagName]
 
-<span class="comment"># 查看tag信息</span>
-<span class="variable">$ </span>git show [tag]
+# 查看tag信息
+$ git show [tag]
 
-<span class="comment"># 提交指定tag</span>
-<span class="variable">$ </span>git push [remote] [tag]
+# 提交指定tag
+$ git push [remote] [tag]
 
-<span class="comment"># 提交所有tag</span>
-<span class="variable">$ </span>git push [remote] --tags
+# 提交所有tag
+$ git push [remote] --tags
 
-<span class="comment"># 新建一个分支，指向某个tag</span>
-<span class="variable">$ </span>git checkout -b [branch] [tag]
-</code></pre><h3 id="查看信息">查看信息</h3><pre><code><span class="comment"># 显示有变更的文件</span>
+# 新建一个分支，指向某个tag
+$ git checkout -b [branch] [tag]
+</code></pre><h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><pre><code># 显示有变更的文件
 $ git status
 
-<span class="comment"># 显示当前分支的版本历史</span>
-$ git <span class="command">log</span>
+# 显示当前分支的版本历史
+$ git log
 
-<span class="comment"># 显示commit历史，以及每次commit发生变更的文件</span>
-$ git <span class="command">log</span> <span class="comment">--stat</span>
+# 显示commit历史，以及每次commit发生变更的文件
+$ git log --stat
 
-<span class="comment"># 搜索提交历史，根据关键词</span>
-$ git <span class="command">log</span> -S [keyword]
+# 搜索提交历史，根据关键词
+$ git log -S [keyword]
 
-<span class="comment"># 显示某个commit之后的所有变动，每个commit占据一行</span>
-$ git <span class="command">log</span> [tag] HEAD <span class="comment">--pretty=format:%s</span>
+# 显示某个commit之后的所有变动，每个commit占据一行
+$ git log [tag] HEAD --pretty=format:%s
 
-<span class="comment"># 显示某个commit之后的所有变动，其"提交说明"必须符合搜索条件</span>
-$ git <span class="command">log</span> [tag] HEAD <span class="comment">--grep feature</span>
+# 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件
+$ git log [tag] HEAD --grep feature
 
-<span class="comment"># 显示某个文件的版本历史，包括文件改名</span>
-$ git <span class="command">log</span> <span class="comment">--follow [file]</span>
-$ git whatchanged [<span class="type">file</span>]
+# 显示某个文件的版本历史，包括文件改名
+$ git log --follow [file]
+$ git whatchanged [file]
 
-<span class="comment"># 显示指定文件相关的每一次diff</span>
-$ git <span class="command">log</span> -p [<span class="type">file</span>]
+# 显示指定文件相关的每一次diff
+$ git log -p [file]
 
-<span class="comment"># 显示过去5次提交</span>
-$ git <span class="command">log</span> -<span class="number">5</span> <span class="comment">--pretty --oneline</span>
+# 显示过去5次提交
+$ git log -5 --pretty --oneline
 
-<span class="comment"># 显示所有提交过的用户，按提交次数排序</span>
+# 显示所有提交过的用户，按提交次数排序
 $ git shortlog -sn
 
-<span class="comment"># 显示指定文件是什么人在什么时间修改过</span>
-$ git blame [<span class="type">file</span>]
+# 显示指定文件是什么人在什么时间修改过
+$ git blame [file]
 
-<span class="comment"># 显示暂存区和工作区的差异</span>
+# 显示暂存区和工作区的差异
 $ git diff
 
-<span class="comment"># 显示暂存区和上一个commit的差异</span>
-$ git diff <span class="comment">--cached [file]</span>
+# 显示暂存区和上一个commit的差异
+$ git diff --cached [file]
 
-<span class="comment"># 显示工作区与当前分支最新commit之间的差异</span>
+# 显示工作区与当前分支最新commit之间的差异
 $ git diff HEAD
 
-<span class="comment"># 显示两次提交之间的差异</span>
-$ git diff [<span class="keyword">first</span>-branch]...[<span class="keyword">second</span>-branch]
+# 显示两次提交之间的差异
+$ git diff [first-branch]...[second-branch]
 
-<span class="comment"># 显示今天你写了多少行代码</span>
-$ git diff <span class="comment">--shortstat "@{0 day ago}"</span>
+# 显示今天你写了多少行代码
+$ git diff --shortstat &quot;@{0 day ago}&quot;
 
-<span class="comment"># 显示某次提交的元数据和内容变化</span>
+# 显示某次提交的元数据和内容变化
 $ git show [commit]
 
-<span class="comment"># 显示某次提交发生变化的文件</span>
-$ git show <span class="comment">--name-only [commit]</span>
+# 显示某次提交发生变化的文件
+$ git show --name-only [commit]
 
-<span class="comment"># 显示某次提交时，某个文件的内容</span>
+# 显示某次提交时，某个文件的内容
 $ git show [commit]:[filename]
 
-<span class="comment"># 显示当前分支的最近几次提交</span>
+# 显示当前分支的最近几次提交
 $ git reflog    
-</code></pre><h3 id="远程同步">远程同步</h3><pre><code><span class="comment"># 下载远程仓库的所有变动</span>
-<span class="variable">$ </span>git fetch [remote]
+</code></pre><h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><pre><code># 下载远程仓库的所有变动
+$ git fetch [remote]
 
-<span class="comment"># 显示所有远程仓库</span>
-<span class="variable">$ </span>git remote -v
+# 显示所有远程仓库
+$ git remote -v
 
-<span class="comment"># 显示某个远程仓库的信息</span>
-<span class="variable">$ </span>git remote show [remote]
+# 显示某个远程仓库的信息
+$ git remote show [remote]
 
-<span class="comment"># 增加一个新的远程仓库，并命名</span>
-<span class="variable">$ </span>git remote add [shortname] [url]
+# 增加一个新的远程仓库，并命名
+$ git remote add [shortname] [url]
 
-<span class="comment"># 取回远程仓库的变化，并与本地分支合并</span>
-<span class="variable">$ </span>git pull [remote] [branch]
+# 取回远程仓库的变化，并与本地分支合并
+$ git pull [remote] [branch]
 
-<span class="comment"># 上传本地指定分支到远程仓库</span>
-<span class="variable">$ </span>git push [remote] [branch]
+# 上传本地指定分支到远程仓库
+$ git push [remote] [branch]
 
-<span class="comment"># 强行推送当前分支到远程仓库，即使有冲突</span>
-<span class="variable">$ </span>git push [remote] --force
+# 强行推送当前分支到远程仓库，即使有冲突
+$ git push [remote] --force
 
-<span class="comment"># 推送所有分支到远程仓库</span>
-<span class="variable">$ </span>git push [remote] --all        
-</code></pre><h3 id="撤销">撤销</h3><pre><code><span class="comment"># 恢复暂存区的指定文件到工作区</span>
-<span class="variable">$ </span>git checkout [file]
+# 推送所有分支到远程仓库
+$ git push [remote] --all        
+</code></pre><h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><pre><code># 恢复暂存区的指定文件到工作区
+$ git checkout [file]
 
-<span class="comment"># 恢复某个commit的指定文件到暂存区和工作区</span>
-<span class="variable">$ </span>git checkout [commit] [file]
+# 恢复某个commit的指定文件到暂存区和工作区
+$ git checkout [commit] [file]
 
-<span class="comment"># 恢复暂存区的所有文件到工作区</span>
-<span class="variable">$ </span>git checkout .
+# 恢复暂存区的所有文件到工作区
+$ git checkout .
 
-<span class="comment"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span>
-<span class="variable">$ </span>git reset [file]
+# 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变
+$ git reset [file]
 
-<span class="comment"># 重置暂存区与工作区，与上一次commit保持一致</span>
-<span class="variable">$ </span>git reset --hard
+# 重置暂存区与工作区，与上一次commit保持一致
+$ git reset --hard
 
-<span class="comment"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span>
-<span class="variable">$ </span>git reset [commit]
+# 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
+$ git reset [commit]
 
-<span class="comment"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span>
-<span class="variable">$ </span>git reset --hard [commit]
+# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
+$ git reset --hard [commit]
 
-<span class="comment"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span>
-<span class="variable">$ </span>git reset --keep [commit]
+# 重置当前HEAD为指定commit，但保持暂存区和工作区不变
+$ git reset --keep [commit]
 
-<span class="comment"># 新建一个commit，用来撤销指定commit</span>
-<span class="comment"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span>
-<span class="variable">$ </span>git revert [commit]
+# 新建一个commit，用来撤销指定commit
+# 后者的所有变化都将被前者抵消，并且应用到当前分支
+$ git revert [commit]
 
-<span class="comment"># 暂时将未提交的变化移除，稍后再移入</span>
-<span class="variable">$ </span>git stash
-<span class="variable">$ </span>git stash pop    
-</code></pre><h3 id="其他">其他</h3><pre><code><span class="comment"># 生成一个可供发布的压缩包</span>
-<span class="variable">$ </span>git archive
+# 暂时将未提交的变化移除，稍后再移入
+$ git stash
+$ git stash pop    
+</code></pre><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><pre><code># 生成一个可供发布的压缩包
+$ git archive
 </code></pre>
       
     </div>
@@ -605,7 +603,7 @@ $ git reflog
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#单词翻译"><span class="toc-number">1.</span> <span class="toc-text">单词翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建代码库"><span class="toc-number">2.1.</span> <span class="toc-text">新建代码库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">2.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加/删除文件"><span class="toc-number">2.3.</span> <span class="toc-text">增加/删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码提交"><span class="toc-number">2.4.</span> <span class="toc-text">代码提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-number">2.5.</span> <span class="toc-text">分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">2.6.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看信息"><span class="toc-number">2.7.</span> <span class="toc-text">查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程同步"><span class="toc-number">2.8.</span> <span class="toc-text">远程同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销"><span class="toc-number">2.9.</span> <span class="toc-text">撤销</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-number">2.10.</span> <span class="toc-text">其他</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#单词翻译"><span class="toc-number">1.</span> <span class="toc-text">单词翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建代码库"><span class="toc-number">2.1.</span> <span class="toc-text">新建代码库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">2.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-删除文件"><span class="toc-number">2.3.</span> <span class="toc-text">增加/删除文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码提交"><span class="toc-number">2.4.</span> <span class="toc-text">代码提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-number">2.5.</span> <span class="toc-text">分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">2.6.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看信息"><span class="toc-number">2.7.</span> <span class="toc-text">查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程同步"><span class="toc-number">2.8.</span> <span class="toc-text">远程同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销"><span class="toc-number">2.9.</span> <span class="toc-text">撤销</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-number">2.10.</span> <span class="toc-text">其他</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -643,9 +641,46 @@ $ git reflog
         }
 
         
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/07/08/Git的正确使用方式/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
 </div>
     
@@ -669,7 +704,7 @@ $ git reflog
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
 
 
 
@@ -690,31 +725,27 @@ $ git reflog
             </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
     </div>
 </footer>
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 
