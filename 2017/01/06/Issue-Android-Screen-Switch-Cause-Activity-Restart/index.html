@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
+<meta name="description" content="记录android开发中的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fastjson过滤不需要的字段">
-<meta property="og:url" content="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/index.html">
+<meta property="og:title" content="Issue:Android横竖屏切换导致activity重启">
+<meta property="og:url" content="http://yoursite.com/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
-<meta property="og:updated_time" content="2016-07-09T02:56:29.000Z">
+<meta property="og:description" content="记录android开发中的问题">
+<meta property="og:updated_time" content="2017-01-06T09:04:20.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fastjson过滤不需要的字段">
-<meta name="twitter:description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
+<meta name="twitter:title" content="Issue:Android横竖屏切换导致activity重启">
+<meta name="twitter:description" content="记录android开发中的问题">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>fastjson过滤不需要的字段 | Chgocn的博客</title>
+<title>Issue:Android横竖屏切换导致activity重启 | Chgocn的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -258,11 +258,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-fastjson过滤不需要的字段" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Issue-Android-Screen-Switch-Cause-Activity-Restart" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/22/fastjson过滤不需要的字段/" class="article-date">
-      <time datetime="2016-03-22T11:48:14.000Z" itemprop="datePublished">Mar 22 2016</time>
+      <a href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/" class="article-date">
+      <time datetime="2017-01-06T09:04:00.000Z" itemprop="datePublished">Jan 6 2017</time>
 </a>
 
 
@@ -277,7 +277,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      fastjson过滤不需要的字段
+      Issue:Android横竖屏切换导致activity重启
     </h1>
   
 
@@ -291,6 +291,10 @@
 
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -298,8 +302,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>#官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]<br>对于List<peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。<br><a id="more"></a></peaple></p>
-<p>##解决办法：<br>    @JSONField(serialize=false)<br>    private int age;</p>
+        <p>我的需求是禁止activity横屏。所以我在AndroidMenifest中将activity标签加入<br>android:screenOrientation=”portrait”，以此禁止横竖屏切换。</p>
+<h2 id="测试步骤：（TestApp只重写了生命周期方法）"><a href="#测试步骤：（TestApp只重写了生命周期方法）" class="headerlink" title="测试步骤：（TestApp只重写了生命周期方法）"></a>测试步骤：（TestApp只重写了生命周期方法）</h2><p>1、进入“TestApp”首页（竖屏）；<br>2、进入后台，打开“优酷”，点击任意视频，重力感应全屏（目的是让手机横屏）；<br>3、点击“任务栏”，切换到“测试app”。</p>
+<blockquote>
+<p>华为手机、三星手机现象：</p>
+</blockquote>
+<p>1、onCreate() -&gt; onStart() -&gt; onResume()<br>2、onPause() -&gt; onStop()<br>3、onRestart() -&gt; onStart() -&gt; onResume()</p>
+<blockquote>
+<p>小米手机现象：</p>
+</blockquote>
+<p>1、onCreate() -&gt; onStart() -&gt; onResume()<br>2、onPause() -&gt; onStop()<br>3、onDestroy() -&gt; 1 -&gt; 2 -&gt; onDestroy() -&gt; 1</p>
+<h2 id="思考："><a href="#思考：" class="headerlink" title="思考："></a>思考：</h2><p>虽然“TestApp”中设置了默认portrait方式，但是进入“优酷”中，手机界面被“强制”横屏了，那么再切换到“TestApp”，activity的config信息已经被改变了？后来我重写了Application的生命周期方法，证实了这一点。</p>
+<p>带着这样的思考，我又给activity标签加入了android:configChanges=”orientation”，MainActivity重写onConfigurationChanged(Configuration newConfig)方法。继续按照测试步骤执行。现象依然同上。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p><a href="https://developer.android.com/guide/topics/manifest/activity-element.html" target="_blank" rel="external">设置orientaion的同时，如果API级别13或更高级别，还要设置sceenSize</a><br>android:configChanges=”orientation|screenSize”</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="http://weibo.com/liaohuqiu?refer_flag=1005055013_&amp;is_all=1" target="_blank" rel="external">秋哥</a><br><a href="https://deepint.slack.com/team/laberat" target="_blank" rel="external">laberat</a></p>
 
       
     </div>
@@ -308,13 +324,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></p>
+        <p><span>本文标题:</span><a href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/">Issue:Android横竖屏切换导致activity重启</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
-        <p><span>发布时间:</span>2016-03-22, 19:48:14</p>
-        <p><span>最后更新:</span>2016-07-09, 10:56:29</p>
+        <p><span>发布时间:</span>2017-01-06, 17:04:00</p>
+        <p><span>最后更新:</span>2017-01-06, 17:04:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/22/fastjson过滤不需要的字段/" title="fastjson过滤不需要的字段">http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/" title="Issue:Android横竖屏切换导致activity重启">http://yoursite.com/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -326,16 +342,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">
-                    Android DatePicker setCalendarViewShown(false) not work
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/26/wechat can't callback/">
-                    ShareSDK微信无法回调
+                <a href="/2016/08/22/SSH-Tutorial/">
+                    git/ssh 简述
                 </a>
             </div>
         
@@ -347,7 +357,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#测试步骤：（TestApp只重写了生命周期方法）"><span class="toc-number">1.</span> <span class="toc-text">测试步骤：（TestApp只重写了生命周期方法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考："><span class="toc-number">2.</span> <span class="toc-text">思考：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-number">4.</span> <span class="toc-text">感谢</span></a></li></ol>
         
     </div>
     <style>
@@ -374,7 +384,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/03/22/fastjson过滤不需要的字段/" data-title="fastjson过滤不需要的字段" data-url="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/" data-title="Issue:Android横竖屏切换导致activity重启" data-url="http://yoursite.com/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/"></div>
     <script>
         var duoshuoQuery = {short_name:"chgocn"};
         var loadComment = function(){
@@ -387,7 +397,7 @@
         
             // Add comment count
             $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/03/22/fastjson过滤不需要的字段/&callback=?";
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/&callback=?";
                 $.getJSON(jsonUrl, function(result){
                     $.each(result.response, function(i, field){
                         var value = field.comments;
@@ -434,15 +444,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/" title="上一篇: Android DatePicker setCalendarViewShown(false) not work">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/26/wechat can't callback/" title="下一篇: ShareSDK微信无法回调">
+            <a href="/2016/08/22/SSH-Tutorial/" title="下一篇: git/ssh 简述">
                 <i class="fa fa-angle-right"></i>
             </a>
         

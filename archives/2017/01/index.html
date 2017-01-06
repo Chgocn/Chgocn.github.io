@@ -15,16 +15,15 @@
 
 
 
-<meta name="description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="fastjson过滤不需要的字段">
-<meta property="og:url" content="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/index.html">
+<meta name="description" content="A Android Mobile Developer.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chgocn的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2017/01/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
-<meta property="og:updated_time" content="2016-07-09T02:56:29.000Z">
+<meta property="og:description" content="A Android Mobile Developer.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fastjson过滤不需要的字段">
-<meta name="twitter:description" content="#官方文档地址:[https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98]对于List peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。">
+<meta name="twitter:title" content="Chgocn的博客">
+<meta name="twitter:description" content="A Android Mobile Developer.">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>fastjson过滤不需要的字段 | Chgocn的博客</title>
+<title>Archives: 2017/1 | Chgocn的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,8 +63,8 @@
         fancybox: true,
         animate: false,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -258,204 +257,60 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-fastjson过滤不需要的字段" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/03/22/fastjson过滤不需要的字段/" class="article-date">
-      <time datetime="2016-03-22T11:48:14.000Z" itemprop="datePublished">Mar 22 2016</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/" class="archive-article-date">
+      <time datetime="2017-01-06T09:04:00.000Z" itemprop="datePublished">01-06</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      fastjson过滤不需要的字段
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/">Issue:Android横竖屏切换导致activity重启</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-archive">
+          
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Android/">Android</a>
     </div>
 
 
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
           
-        <p>#官方文档地址:[<a href="https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="external">https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98</a>]<br>对于List<peaple> peapleList这样的集合，Peaple内包含Women和Man这样的实体类，需求是过滤Women和Man里的字段，那么SimplePropertyPreFilter这样的简单过滤就不适合了。<br><a id="more"></a></peaple></p>
-<p>##解决办法：<br>    @JSONField(serialize=false)<br>    private int age;</p>
-
-      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
     </div>
-    
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
-        <p><span>发布时间:</span>2016-03-22, 19:48:14</p>
-        <p><span>最后更新:</span>2016-07-09, 10:56:29</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/22/fastjson过滤不需要的字段/" title="fastjson过滤不需要的字段">http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">
-                    Android DatePicker setCalendarViewShown(false) not work
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/26/wechat can't callback/">
-                    ShareSDK微信无法回调
-                </a>
-            </div>
-        
-    </nav>
-
-  
 </article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
-    </script>
-
-
-
-
+  
+  
+    </div></section>
+  
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/03/22/fastjson过滤不需要的字段/" data-title="fastjson过滤不需要的字段" data-url="http://yoursite.com/2016/03/22/fastjson过滤不需要的字段/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"chgocn"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
 
-        
-            // Add comment count
-            $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/03/22/fastjson过滤不需要的字段/&callback=?";
-                $.getJSON(jsonUrl, function(result){
-                    $.each(result.response, function(i, field){
-                        var value = field.comments;
-                        if (value > 0) {
-                            $(".count-comment").text(value);
-                            return;
-                        }
-                    })
-                })
-            })
-        
-    </script>
-    
-    <aside class="comment-bar">
-        <a href="javascript:void(0);">
-            <i class="fa fa-commenting-o animated infinite pulse"></i>
-            <i class="fa fa-spinner fa-pulse"></i>
-            <span class="count-comment"></span>
-        </a>
-    </aside>
-    <script>
-        var $commentBar = $("#comments aside.comment-bar");
-        var load$hide = function(){
-            $commentBar.find("a > i").toggle();
-            loadComment();
-            $commentBar.fadeOut(800);
-        }
-        $commentBar.click(function(){
-            load$hide();
-        })
-        $commentBar.children("a").hover(function(){
-            load$hide();
-        })
-        if (window.location.hash === "#comments") {
-            load$hide();
-        }
-    </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/" title="上一篇: Android DatePicker setCalendarViewShown(false) not work">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/01/26/wechat can't callback/" title="下一篇: ShareSDK微信无法回调">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/">Issue:Android横竖屏切换导致activity重启</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/SSH-Tutorial/">git/ssh 简述</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/Docker-Frequently-Used-Command/">Docker基本命令记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/02/Java-Compiler-Collections/">Java反编译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/Android-Studio-Plugins/">我的 Android Studio 插件（不间断更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/Android蓝牙使用总结/">Android蓝牙使用总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Hexo基本使用/">Hexo基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/Git的正确使用方式/">Git的正确使用方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/27/Android DatePicker setCalendarViewShown(false) not work/">Android DatePicker setCalendarViewShown(false) not work</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/fastjson过滤不需要的字段/">fastjson过滤不需要的字段</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/26/wechat can't callback/">ShareSDK微信无法回调</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/android-navigation/">Android深入学习导航</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Git Simple Use/">Git使用技巧以及出现的bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/07/Sublime Text 3 安装与使用/">Sublime Text 3 安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/Android5-x新特性之-Toolbar和Theme的使用/">Android5.x新特性之 Toolbar和Theme的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/LinearLayout-divider的用法/">LinearLayout divider的用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/PagerSlidingTabStrip+ViewPager实现二级页签/">PagerSlidingTabStrip+ViewPager实现二级导签</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/12/Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理/">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
