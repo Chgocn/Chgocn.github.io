@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="全新电脑搭建Android开发环境，仅仅列出步骤，软件的使用以及细节不做解释。">
+<meta name="description" content="记一次随机性产生的崩溃问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android开发环境搭建">
-<meta property="og:url" content="http://yoursite.com/2016/08/19/Android-Developer-Envirement-Build-Note/index.html">
+<meta property="og:title" content="Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)">
+<meta property="og:url" content="http://yoursite.com/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/index.html">
 <meta property="og:site_name" content="Chgocn的博客">
-<meta property="og:description" content="全新电脑搭建Android开发环境，仅仅列出步骤，软件的使用以及细节不做解释。">
-<meta property="og:updated_time" content="2016-08-19T05:08:15.090Z">
+<meta property="og:description" content="记一次随机性产生的崩溃问题。">
+<meta property="og:updated_time" content="2017-02-09T07:01:43.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android开发环境搭建">
-<meta name="twitter:description" content="全新电脑搭建Android开发环境，仅仅列出步骤，软件的使用以及细节不做解释。">
+<meta name="twitter:title" content="Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)">
+<meta name="twitter:description" content="记一次随机性产生的崩溃问题。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Android开发环境搭建 | Chgocn的博客</title>
+<title>Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread) | Chgocn的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -258,11 +258,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Android-Developer-Envirement-Build-Note" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/19/Android-Developer-Envirement-Build-Note/" class="article-date">
-      <time datetime="2016-08-19T02:55:00.000Z" itemprop="datePublished">Aug 19 2016</time>
+      <a href="/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/" class="article-date">
+      <time datetime="2017-02-09T06:08:00.000Z" itemprop="datePublished">Feb 9 2017</time>
 </a>
 
 
@@ -277,7 +277,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android开发环境搭建
+      Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)
     </h1>
   
 
@@ -286,13 +286,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/device/">device</a>
+    <a class="article-category-link" href="/categories/Android/">Android</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发环境/">开发环境</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -302,34 +302,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li>jdk</li>
-<li>android studio + sdk + plugins</li>
-<li>eclipse</li>
-<li>graphviz</li>
-<li>local gradle</li>
-<li>chrome</li>
-<li>shadowsocks</li>
-<li>sublime + plugins</li>
-<li>evernote</li>
-<li>gitbook</li>
-<li>node.js</li>
-<li>hexo</li>
-<li>git</li>
-<li>Tortoisegit</li>
-<li>source tree</li>
-<li>sqlite</li>
-<li>everything</li>
-<li>docker</li>
-<li>gitlab ci runner</li>
-<li>7zip</li>
-<li>欧陆词典</li>
-<li>ssh Key配置</li>
-</ul>
-<!-- ## 其他
-- wechat
-- qq
-- cloud music -->
+        <p>这个问题产生的背景是我使用了网上一个自定义view。然后在测试性能的时候，发现app崩溃，抓取的log如下：</p>
+<pre><code>Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)
+</code></pre><p>测试手机：华为P8青春版 HUAWEI ALE-UL00 (Android 5.0.2,API21)</p>
+<p>google了几个关键字：<a href="https://zh.wikipedia.org/wiki/SIGSEGV" target="_blank" rel="external">SIGSEGV</a>、<a href="http://blog.csdn.net/luoshengyang/article/details/45769759" target="_blank" rel="external">RenderThread（老罗的Android应用程序UI硬件加速渲染环境初始化过程分析）</a></p>
+<p>随后咨询了一下同学，得到另外两个关键字：界面重绘、硬件加速。</p>
+<p>随后我搜索了“android 硬件加速”，看到<a href="http://www.jianshu.com/p/9cd7097a4fcf" target="_blank" rel="external">关于硬件加速的那么点儿东西</a>，最后我在自定义view的布局标签加了一句关闭硬件加速的代码：</p>
+<pre><code>android:layerType=&quot;software&quot;
+</code></pre><p>最终解决了这个问题。</p>
+<p>另附：</p>
+<blockquote>
+<p><a href="http://blog.csdn.net/eclipsexys/article/details/44228403" target="_blank" rel="external">Android硬件加速中文API文档</a></p>
+</blockquote>
 
       
     </div>
@@ -338,13 +322,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/19/Android-Developer-Envirement-Build-Note/">Android开发环境搭建</a></p>
+        <p><span>本文标题:</span><a href="/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/">Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Chgocn</a></p>
-        <p><span>发布时间:</span>2016-08-19, 10:55:00</p>
-        <p><span>最后更新:</span>2016-08-19, 13:08:15</p>
+        <p><span>发布时间:</span>2017-02-09, 14:08:00</p>
+        <p><span>最后更新:</span>2017-02-09, 15:01:43</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/19/Android-Developer-Envirement-Build-Note/" title="Android开发环境搭建">http://yoursite.com/2016/08/19/Android-Developer-Envirement-Build-Note/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/08/19/Android-Developer-Envirement-Build-Note/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/" title="Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)">http://yoursite.com/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/　　作者: Chgocn" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -356,16 +340,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/08/22/Docker-Frequently-Used-Command/">
-                    Docker基本命令记录
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/">
-                    Sublime Text 3安装Sublime_Diagram_Plugin插件总结
+                <a href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/">
+                    Issue:Android横竖屏切换导致activity重启
                 </a>
             </div>
         
@@ -377,7 +355,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境"><span class="toc-number">1.</span> <span class="toc-text">环境</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -404,7 +382,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/08/19/Android-Developer-Envirement-Build-Note/" data-title="Android开发环境搭建" data-url="http://yoursite.com/2016/08/19/Android-Developer-Envirement-Build-Note/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/" data-title="Issue:Alibc Fatal signal 11 (SIGSEGV),code 1,fault addr 0x0 in tid 28764 (RenderThread)" data-url="http://yoursite.com/2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/"></div>
     <script>
         var duoshuoQuery = {short_name:"chgocn"};
         var loadComment = function(){
@@ -417,7 +395,7 @@
         
             // Add comment count
             $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2016/08/19/Android-Developer-Envirement-Build-Note/&callback=?";
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=chgocn&threads=2017/02/09/Issue-Alibc-Fatal-signal-11-(SIGSEGV), code 1, fault addr 0x0 in tid 28764 (RenderThread)/&callback=?";
                 $.getJSON(jsonUrl, function(result){
                     $.each(result.response, function(i, field){
                         var value = field.comments;
@@ -464,15 +442,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/22/Docker-Frequently-Used-Command/" title="上一篇: Docker基本命令记录">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/08/03/Solution-For-Install-Sublime-Diagram-Plugin-On-Windows/" title="下一篇: Sublime Text 3安装Sublime_Diagram_Plugin插件总结">
+            <a href="/2017/01/06/Issue-Android-Screen-Switch-Cause-Activity-Restart/" title="下一篇: Issue:Android横竖屏切换导致activity重启">
                 <i class="fa fa-angle-right"></i>
             </a>
         
