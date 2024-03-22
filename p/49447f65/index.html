@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>git 设置代理 | 记事本</title>
+  <meta name="keywords" content=" proxy ">
+  <meta name="description" content="git 设置代理 | 记事本">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="关于博客            编程统计近七日使用的编程语言  近七日使用的IDE  近一个月我的编程活动">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://chgocn.github.io/about/index.html">
+<meta property="og:site_name" content="记事本">
+<meta property="og:description" content="关于博客            编程统计近七日使用的编程语言  近七日使用的IDE  近一个月我的编程活动">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-16T09:23:51.000Z">
+<meta property="article:modified_time" content="2024-03-22T08:52:14.338Z">
+<meta property="article:author" content="Chgocn">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="https://os-buket.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/zenbum.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daodaoplus@1.1.7/static/css/index.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-daodao-plus@2.2.4/dist/css/main.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.0.1/swiper-bundle.min.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="https://os-buket.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Chgocn</span>
+</div>
+
+
+
+
+    <a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(55)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="文档">
+                        
+                        文档
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="逆向">
+                        
+                        逆向
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="建站">
+                        
+                        建站
+                        <small>(4)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="公众号">
+                        
+                        公众号
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Android">
+                        
+                        Android
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="language">
+                        
+                        language
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="windows">
+                        
+                        windows
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="git">
+                        
+                        git
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Script">
+                        
+                        Script
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+            
+                <a class="dynamic-menu site_url"
+                   
+                   href="https://chgocn.github.io/notes/">笔记</a>
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="55">
+<input type="hidden" id="yelog_site_word_count" value="36.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <!-- <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-tag" data-title="标签 快捷键 t"></i>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div> -->
+        <div id="search-panel">
+            <!-- <i class="iconfont icon-left" data-title="返回"></i> -->
+            <input id="local-search-input" autocomplete="off" placeholder="Search...">/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cloudflare</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>dev</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>github</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>imagemagisk</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jdk</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>proxy</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ssh</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>typora</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unicode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>windows</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wsl2</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="tags-grid">
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color3">Android</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color1">cloudflare</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color4">dev</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color4">git</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color2">github</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color2">imagemagisk</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color4">jdk</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color1">nginx</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color1">proxy</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color2">python</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color4">ssh</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color2">typora</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color3">Unicode</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color3">windows</a>
+            </li>
+        
+            
+            <li class="article-tag-list-item">
+                <a class="color5">wsl2</a>
+            </li>
+        
+    </div>
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 Script "
+           href="/p/4c6327d2/"
+           data-tag="python,Android"
+           data-author="" >
+            <span class="post-title" title="Excel转Android字符串资源脚本">Excel转Android字符串资源脚本</span>
+            <span class="post-date" title="2024-03-22 08:16:28">2024/03/22</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/17eebd65/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Cannot resolve symbol AppCompatActivity">Cannot resolve symbol AppCompatActivity</span>
+            <span class="post-date" title="2023-01-30 16:39:11">2023/01/30</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/ccb8e643/"
+           data-tag="dev,windows,jdk"
+           data-author="" >
+            <span class="post-title" title="开发环境篇之windows一键切换jdk">开发环境篇之windows一键切换jdk</span>
+            <span class="post-date" title="2023-01-30 14:51:03">2023/01/30</span>
+        </a>
+        
+        <a  class="全部文章 逆向 "
+           href="/p/960ad29a/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="微信公众号小程序检测之环境搭建">微信公众号小程序检测之环境搭建</span>
+            <span class="post-date" title="2022-09-29 09:55:19">2022/09/29</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/394511ee/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Rust 学习笔记：package/crate/module">Rust 学习笔记：package/crate/module</span>
+            <span class="post-date" title="2022-08-29 08:48:33">2022/08/29</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/b23e24f8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="rust 使用">rust 使用</span>
+            <span class="post-date" title="2022-08-26 15:45:58">2022/08/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/db20c36/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="模拟弱网络测试">模拟弱网络测试</span>
+            <span class="post-date" title="2022-07-14 16:25:27">2022/07/14</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/516f64dc/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="js 运行时">js 运行时</span>
+            <span class="post-date" title="2022-07-11 09:49:02">2022/07/11</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/p/f28018d1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="某 js 插件编写文档">某 js 插件编写文档</span>
+            <span class="post-date" title="2022-07-07 14:11:01">2022/07/07</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/p/545d822b/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ADB 开发文档">ADB 开发文档</span>
+            <span class="post-date" title="2022-07-04 13:02:48">2022/07/04</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/eb3d08ec/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="测试一下在线写博客">测试一下在线写博客</span>
+            <span class="post-date" title="2022-07-02 11:38:30">2022/07/02</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/e7f72a51/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="wx-ggbot-tutorial">wx-ggbot-tutorial</span>
+            <span class="post-date" title="2022-06-23 09:50:41">2022/06/23</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/7a886088/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="app 架构设计">app 架构设计</span>
+            <span class="post-date" title="2022-06-21 09:31:08">2022/06/21</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/8ce4cdf8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hqt 项目总结">hqt 项目总结</span>
+            <span class="post-date" title="2022-05-26 15:23:34">2022/05/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/be6a9fa0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="mustache 文档笔记">mustache 文档笔记</span>
+            <span class="post-date" title="2022-05-09 08:52:22">2022/05/09</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/8938d84a/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Openwrt使用KMS服务器的使用">Openwrt使用KMS服务器的使用</span>
+            <span class="post-date" title="2022-04-25 15:14:57">2022/04/25</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/2a33dda2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="termux-ssh-pc">termux-ssh-pc</span>
+            <span class="post-date" title="2022-04-15 09:00:01">2022/04/15</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/eb22c0af/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="n1 电视系统转刷 openwrt，并设置旁路由">n1 电视系统转刷 openwrt，并设置旁路由</span>
+            <span class="post-date" title="2022-04-07 09:03:49">2022/04/07</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/ca4ad0e5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="使用 docker 安装 gitea">使用 docker 安装 gitea</span>
+            <span class="post-date" title="2022-04-06 16:33:05">2022/04/06</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/63b3c1c/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="jadx 错误总结">jadx 错误总结</span>
+            <span class="post-date" title="2022-04-01 16:55:39">2022/04/01</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/a46beb02/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="frida 使用">frida 使用</span>
+            <span class="post-date" title="2022-04-01 13:37:36">2022/04/01</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/6588bb8d/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="使用 frp 实现内网穿透">使用 frp 实现内网穿透</span>
+            <span class="post-date" title="2022-03-30 11:04:02">2022/03/30</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/99e81533/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="pdf 文档去水印以及将A3页面分割成A4页面">pdf 文档去水印以及将A3页面分割成A4页面</span>
+            <span class="post-date" title="2022-03-28 15:23:51">2022/03/28</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/315ed93b/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="markdown-to-ppt">markdown-to-ppt</span>
+            <span class="post-date" title="2022-03-16 14:50:30">2022/03/16</span>
+        </a>
+        
+        <a  class="全部文章 公众号 "
+           href="/p/8b334f02/"
+           data-tag="typora,imagemagisk"
+           data-author="" >
+            <span class="post-title" title="公众号图片批量处理以及一键排版">公众号图片批量处理以及一键排版</span>
+            <span class="post-date" title="2022-03-16 13:41:16">2022/03/16</span>
+        </a>
+        
+        <a  class="全部文章 逆向 "
+           href="/p/f5ba4ed6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="apk脱壳+回编译+重新签名">apk脱壳+回编译+重新签名</span>
+            <span class="post-date" title="2022-03-07 15:19:26">2022/03/07</span>
+        </a>
+        
+        <a  class="全部文章 建站 "
+           href="/p/1562b2a5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo插件">Hexo插件</span>
+            <span class="post-date" title="2022-01-11 10:55:28">2022/01/11</span>
+        </a>
+        
+        <a  class="全部文章 建站 "
+           href="/p/f90668a2/"
+           data-tag="proxy"
+           data-author="" >
+            <span class="post-title" title="Butterfly主题使用">Butterfly主题使用</span>
+            <span class="post-date" title="2022-01-11 10:55:24">2022/01/11</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/b68ec802/"
+           data-tag="Unicode"
+           data-author="" >
+            <span class="post-title" title="中文输出乱码的一些总结">中文输出乱码的一些总结</span>
+            <span class="post-date" title="2022-01-06 16:07:27">2022/01/06</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/2375cf71/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 多账号配置">git 多账号配置</span>
+            <span class="post-date" title="2021-12-17 09:00:39">2021/12/17</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/35988c4c/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="对多个远程仓库地址自动设置不同的用户名称和邮箱">对多个远程仓库地址自动设置不同的用户名称和邮箱</span>
+            <span class="post-date" title="2021-12-17 09:00:39">2021/12/17</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/49447f65/"
+           data-tag="proxy"
+           data-author="" >
+            <span class="post-title" title="git 设置代理">git 设置代理</span>
+            <span class="post-date" title="2021-12-16 14:19:20">2021/12/16</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/p/cfebe32b/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="Nginx 入门之-配置密码访问：访问网页需输入用户名密码">Nginx 入门之-配置密码访问：访问网页需输入用户名密码</span>
+            <span class="post-date" title="2021-12-15 14:16:30">2021/12/15</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/p/849e798f/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="Nginx 入门之-反向代理实现二级域名转发">Nginx 入门之-反向代理实现二级域名转发</span>
+            <span class="post-date" title="2021-12-15 14:16:30">2021/12/15</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/p/b0add2d0/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="docker 安装 nginx">docker 安装 nginx</span>
+            <span class="post-date" title="2021-12-14 15:41:58">2021/12/14</span>
+        </a>
+        
+        <a  class="全部文章 language "
+           href="/p/python/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Python3的日常使用">Python3的日常使用</span>
+            <span class="post-date" title="2021-12-09 09:15:52">2021/12/09</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/b5249cc1/"
+           data-tag="wsl2"
+           data-author="" >
+            <span class="post-title" title="wsl2 使用">wsl2 使用</span>
+            <span class="post-date" title="2021-12-08 10:47:06">2021/12/08</span>
+        </a>
+        
+        <a  class="全部文章 逆向 "
+           href="/p/3880c095/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VMOS 简单抓包">VMOS 简单抓包</span>
+            <span class="post-date" title="2021-12-07 11:45:10">2021/12/07</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/473cf362/"
+           data-tag="github"
+           data-author="" >
+            <span class="post-title" title="github 设置代理">github 设置代理</span>
+            <span class="post-date" title="2021-12-06 15:56:57">2021/12/06</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/4d799774/"
+           data-tag="proxy"
+           data-author="" >
+            <span class="post-title" title="windows 下各个软件的代理设置">windows 下各个软件的代理设置</span>
+            <span class="post-date" title="2021-12-06 15:15:00">2021/12/06</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/86c88f6a/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 使用">git 使用</span>
+            <span class="post-date" title="2021-12-06 14:51:50">2021/12/06</span>
+        </a>
+        
+        <a  class="全部文章 建站 "
+           href="/p/c2f948cd/"
+           data-tag="cloudflare"
+           data-author="" >
+            <span class="post-title" title="使用cloudflare为博客域名添加https支持">使用cloudflare为博客域名添加https支持</span>
+            <span class="post-date" title="2021-11-26 14:49:03">2021/11/26</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/4a17b156/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2021-11-15 10:25:30">2021/11/15</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/p/3ab42c8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="flutter GetX 框架">flutter GetX 框架</span>
+            <span class="post-date" title="2021-10-07 12:00:10">2021/10/07</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/bdc4320e/"
+           data-tag="ssh"
+           data-author="" >
+            <span class="post-title" title="git/ssh 简述">git/ssh 简述</span>
+            <span class="post-date" title="2016-08-22 14:45:51">2016/08/22</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/p/9e7634f3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Docker 使用记录">Docker 使用记录</span>
+            <span class="post-date" title="2016-08-22 11:07:00">2016/08/22</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/3f0648c/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Sublime Text 3安装Sublime_Diagram_Plugin插件总结">Sublime Text 3安装Sublime_Diagram_Plugin插件总结</span>
+            <span class="post-date" title="2016-08-03 18:05:10">2016/08/03</span>
+        </a>
+        
+        <a  class="全部文章 逆向 "
+           href="/p/87ac8aff/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java反编译工具">Java反编译工具</span>
+            <span class="post-date" title="2016-08-02 13:52:10">2016/08/02</span>
+        </a>
+        
+        <a  class="全部文章 Android "
+           href="/p/cc866726/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我的 Android Studio 插件（不间断更新）">我的 Android Studio 插件（不间断更新）</span>
+            <span class="post-date" title="2016-07-23 09:45:51">2016/07/23</span>
+        </a>
+        
+        <a  class="全部文章 建站 "
+           href="/p/c3c198d3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo基本使用">Hexo基本使用</span>
+            <span class="post-date" title="2016-07-15 23:11:10">2016/07/15</span>
+        </a>
+        
+        <a  class="全部文章 git "
+           href="/p/43832c2f/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git的常用命令">Git的常用命令</span>
+            <span class="post-date" title="2016-07-08 12:00:10">2016/07/08</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/1bb6c781/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Sublime Text 3 安装与使用">Sublime Text 3 安装与使用</span>
+            <span class="post-date" title="2015-12-07 11:45:10">2015/12/07</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/p/5fd8b403/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Android5.x新特性之 Toolbar和Theme的使用">Android5.x新特性之 Toolbar和Theme的使用</span>
+            <span class="post-date" title="2015-11-17 17:51:26">2015/11/17</span>
+        </a>
+        
+        <a  class="全部文章 windows "
+           href="/p/d30ca237/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理">Svn、Git、Dropbox、Onedrive Overlay Icon显示异常处理</span>
+            <span class="post-date" title="2015-08-12 10:17:10">2015/08/12</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/p/fea0ccee/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 工作流">Git 工作流</span>
+            <span class="post-date" title="2015-06-08 12:00:10">2015/06/08</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-git-proxy" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">git 设置代理</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="git">git</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">proxy</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-12-16 14:19:24'>2021-12-16 14:19</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:220</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#https%E8%AE%BF%E9%97%AE"><span class="toc-text">https访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E8%AE%BF%E9%97%AE"><span class="toc-text">ssh访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="https访问"><a href="#https访问" class="headerlink" title="https访问"></a>https访问</h2><p>仅为github.com设置socks5代理(推荐这种方式, 公司内网就不用设代理了, 多此一举):</p>
+<pre><code>git config --global http.https://github.com.proxy socks5://127.0.0.1:1086
+</code></pre>
+<p>其中1086是socks5的监听端口, 这个可以配置的, 每个人不同, 在macOS上一般为1086.<br>设置完成后, ~/.gitconfig文件中会增加以下条目:</p>
+<pre><code>[http &quot;https://github.com&quot;]
+    proxy = socks5://127.0.0.1:1086
+</code></pre>
+<h2 id="ssh访问"><a href="#ssh访问" class="headerlink" title="ssh访问"></a>ssh访问</h2><p>需要修改~/.ssh/config文件, 没有的话新建一个. 同样仅为github.com设置代理:</p>
+<pre><code>Host github.com
+    User git
+    ProxyCommand nc -v -x 127.0.0.1:1086 %h %p
+</code></pre>
+<p>如果是在Windows下, 则需要个性%home%.ssh\config, 其中内容类似于:</p>
+<pre><code>Host github.com
+    User git
+    ProxyCommand connect -S 127.0.0.1:1086 %h %p
+</code></pre>
+<p>这里-S表示使用socks5代理, 如果是http代理则为-H. connect工具git自带, 在\mingw64\bin\下面.</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/laispace/666dd7b27e9116faece6">git 设置和取消代理</a></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 chgocn@gmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+    <div id="comments">
+  <!-- twikoo会把twi这个div替换掉，而不是成为其孩子 -->
+  <div id="twi"> </div> 
+</div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.0/dist/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-chgocn.vercel.app',
+    el: '#twi',
+    // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数
+    // path: 'window.location.pathname', // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/dev/src/js/utils/i18n/index.js
+  })
+</script>
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2021-2022 Chgocn
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?chgocn";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="chgocn";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/about/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script  src="https://cdn.jsdelivr.net/npm/hexo-daodao-plus@2.2.4/dist/js/main.min.js"></script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper@7.0.1/swiper-bundle.min.js"></script><script data-pjax>
+        function daodao_plus_injector_config(){
+            function ddSwiperInit(){
+                const ddSwiper =new DaodaoSwiper(daodao_url,bbpath,filter);
+                ddSwiper.init();
+            }
+            var daodao_url = "https://daodao-chgocn.vercel.app/api/query/20";
+            var bbpath = /daodao/;
+            var filter = JSON.parse('["iframe","img","script","code"]');
+            var parent_div_git = document.getElementsByClassName('recent-posts')[0];
+            var item_html =  '<div class="recent-post-item" style="height: auto;width: 100%"><div class="bbTimeList container" id="bbTimeList" style="height: auto;width: 100%"><a class="bber-gotobb fas fa-bullhorn" href="/daodao/" title="叨叨"></a><div class="swiper" id="bbtalk"><div class="swiper-wrapper" id="bber-talk"></div></div><a class="bber-gotobb fas fa-arrow-circle-right" href="/daodao/" title="查看全文"></a></div></div>';
+            console.log('已挂载daodao_plus')
+            parent_div_git.insertAdjacentHTML("afterbegin",item_html) 
+            if (typeof DaodaoSwiper === 'function' && typeof Daodao==='function'){
+                ddSwiperInit();
+            }else{
+                let ddScripts = []
+                if(typeof DaodaoSwiper!=="function")
+                    ddScripts.push( getScript('https://cdn.jsdelivr.net/npm/hexo-daodao-plus@2.2.4/dist/js/main.min.js'))
+                if(typeof Daodao!=="function")
+                    ddScripts.push( getScript('https://cdn.jsdelivr.net/npm/daodaoplus@1.1.7/static/js/index.min.js'))
+                Promise.all(ddScripts).then(ddSwiperInit);
+            }
+
+        }
+        if( document.getElementsByClassName('recent-posts')[0] && (location.pathname ==='/')){
+                daodao_plus_injector_config()
+        }</script><!-- hexo injector body_end end --></body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    
+    
+    
+    <a class="dynamic-menu site_url"   href="https://chgocn.github.io/notes/">笔记</a>
+    
+</div>
+
+
+</html>
